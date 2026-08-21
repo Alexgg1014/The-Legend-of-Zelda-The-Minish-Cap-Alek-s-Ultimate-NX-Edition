@@ -1,1 +1,2 @@
-fddd091156a7619dff8e74484c25476ce1adf7345d95f2430b27b3cac9ec2079 *tmc_aleks_ultimate_nx_v0.1.0.nro
+d446919d883ad1e90a9d3e64b3ac7ee2e5b18a03f71ffb58dbb89b0ae9915f17 *tmc_aleks_ultimate_nx_v0.1.1.nro
+d1f87cc5d62726ef1b56ec608427899a52fee184c7bc6f3a2063cc8489a27f38 *tmc_aleks_ultimate_nx_v0.1.1.zip
