@@ -1,5 +1,26 @@
 # Changelog
 
+## v1.3.5 — the v1.3.3 save freeze
+
+### Fixed
+
+- **Creating a save file froze the game.** v1.3.3's atomic swap was performed
+  per 8-byte EEPROM block: create tmc.sav.tmp, write 8 KB, close, remove
+  tmc.sav, rename. Four SD metadata operations per block, ~160 blocks for a save
+  and several hundred when the engine formats the EEPROM for a new game -- a
+  measured 4096 filesystem operations where there should be 3. On hardware that
+  is a freeze of minutes, and force-closing out of it left a stranded
+  tmc.sav.tmp with no tmc.sav, because the remove had already run. Blocks now
+  only mark the image dirty; Port_Save_Tick commits at most one swap per frame,
+  driven from port_bios.c beside the autosave tick. The swap itself stays: a
+  fragment on the card is how saves were lost to begin with. A complete stranded
+  tmc.sav.tmp is adopted on load, so nobody bitten by v1.3.3 loses progress.
+
+  Also added: tools/save_selftest, which compiles the real port_save.c on the
+  host with fopen/remove/rename redirected to counting wrappers. It asserts the
+  operation count, not just the behaviour -- the property that would have caught
+  this before it shipped.
+
 ## v1.3.4 — screen-transition crash, and the updater brought back
 
 ### Fixed
