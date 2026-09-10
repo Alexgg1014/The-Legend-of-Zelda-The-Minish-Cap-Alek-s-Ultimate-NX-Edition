@@ -7,10 +7,8 @@
   "nro_size": 14210739,
   "min_updater_schema": 1,
   "changelog": [
-    "Fixes a crash on the way to Syrup's Hut, entering Lake Hylia",
     "Fixes save files being lost when the game is closed while saving",
-    "Achievements now really work offline, and sync on the next boot with a network",
-    "Unlocked achievements no longer keep their grey badge",
-    "Connect once after updating so the achievement set can be saved for offline use"
+    "Fixes a crash entering Lake Hylia, and offline achievements",
+    "Connect once after updating so achievements can work offline"
   ]
 }
