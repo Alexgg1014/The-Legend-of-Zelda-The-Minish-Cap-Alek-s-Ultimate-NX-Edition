@@ -1,5 +1,77 @@
 # Changelog
 
+## v1.3.3 — Lake Hylia crash, and achievements that really work offline
+
+Hotfix for a reproducible crash entering Lake Hylia while heading to Syrup's
+Hut for the Wake-Up Mushroom, plus the offline achievement cache missing the
+one request that carries the set.
+
+### Fixed
+
+- **Out-of-range NPC sprite-table lookup.** `LoadExtraSpriteData(this,
+  table[this->type])` indexed a 21-entry table of pointers with a `type` of
+  64. The read ran 43 slots past the end into the font colour buffer BSS
+  places behind it and produced a fake pointer, which the sprite loader then
+  dereferenced — Data Abort. On GBA the same index reads a ROM word: wrong
+  sprite, no crash. Both pointer tables of that shape (townspeople, children)
+  are now bounded, and `LoadExtraSpriteData` treats a null table as "no extra
+  parts" instead of faulting. A build check ties each bound to the table's own
+  size. Why the NPC carries type 64 is still open; this only makes it
+  survivable.
+
+- **Offline achievements never cached the set.** `IsCacheable()` in
+  port_ra_offline.c listed the endpoints an offline boot may replay from the SD
+  card, and the game-data step was listed under its old name, `patch`. rcheevos
+  12 fetches the set through `achievementsets` (rc_client_begin_load_game ->
+  rc_api_init_fetch_game_sets_request_hosted) and never issues `patch` at all,
+  so the cache stored login and startsession but not the payload the gallery is
+  built from: an offline boot logged in from cache and then showed NO
+  ACHIEVEMENT SET LOADED. Silent since v1.3.0. One online boot after updating
+  writes the set; offline boots then work. A build check resolves the three
+  init functions rc_client calls back to their endpoint strings and fails if any
+  is not cacheable, so a library bump cannot re-introduce this.
+
+- **Unlocked achievements kept their grey badge.** RetroAchievements serves two
+  images per badge id (`155791.png` and `155791_lock.png`), but all three badge
+  caches — the resident pixel cache, the gallery prefetch, and the unlock-toast
+  download — keyed on the id alone and check the cache before the network. The
+  first image to arrive won permanently, so an achievement whose badge had been
+  prefetched while locked kept the grey locked art after unlocking: green title,
+  grey picture. Cache entries are now keyed by state through one shared
+  `Port_RA_Gallery_BadgeKey`, with the unlocked art deliberately not landing on
+  the old path, which already holds locked art on installs that ran an earlier
+  build. Old entries are never read again; deleting `switch/tmc/ra_badges/` is
+  optional housekeeping.
+
+- **A save could be lost by closing the game while it wrote.** The engine
+  commits a save one 8-byte EEPROM block at a time, ~160 times per file, and
+  port_save.c flushed after every block with `fopen("tmc.sav", "wb")` -- which
+  truncates the file to zero before rewriting all 8 KB. Killing the process
+  inside any of those windows (closing homebrew from the HOME menu does it) left
+  tmc.sav short; the loader ignored fread's return value, the engine saw a
+  broken header and formatted, and all three save files were gone. The flush now
+  writes a temp image and swaps it in, so the live file is only ever replaced by
+  a complete one; the loader refuses anything that is not a whole EEPROM image
+  and falls back to a session-start `tmc.sav.bak`. Reported and reproduced
+  2026-09-08.
+
+- **Achievements earned offline never reached the server.** The unlock was
+  written to `ra_unlock_queue.bin` correctly, but the only caller of the drain
+  was RC_CLIENT_EVENT_RECONNECTED -- an event rc_client raises only after a
+  disconnect *in the same session*. An unlock earned offline in a run that then
+  exited was never looked at again, which is precisely the case the on-disk
+  queue exists for. The queue is now drained whenever a game finishes loading,
+  the "every boot" contract its own header always stated.
+
+### Diagnostics
+
+- Crash reports now print an `anchor` line: the runtime address of a known
+  function, so the load base is `anchor - (its address in the .elf)` and `pc`
+  resolves to a function name from the report alone. Previously that base lived
+  only in Atmosphere's own crash report -- the file that never arrives with the
+  bug report. A Kinstone fusion also drops a `FUSE_BEGIN` breadcrumb naming the
+  fuser and the candidate slot.
+
 ## v1.3.1 — Cave of Flames lava platforms, properly this time
 
 Hotfix for two reports against v1.3.0: platforms still missing on B2, and in
