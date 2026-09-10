@@ -1,5 +1,48 @@
 # Changelog
 
+## v1.3.4 — screen-transition crash, and the updater brought back
+
+### Fixed
+
+- **Null owner crash on a screen transition.** DarkNutSwordSlash dereferenced
+  `this->parent` in DarkNutSwordSlash_Init before the existing
+  `parent == NULL -> DeleteThisEntity()` check a few lines below it, so a slash
+  projectile ticked by ProjectileUpdate during GameMain_ChangeRoom -- respawned
+  as a room entity with no owner yet -- faulted on `far = 0x12`, Entity.type's
+  native offset. On GBA that read lands in the BIOS and the delete cleans up
+  regardless. The check is hoisted above the dereference; DeleteThisEntity does
+  not return, so the end state is retail's. Reported by digdat0 on the Lon Lon
+  Ranch transition, resolved from the Atmosphere module base plus the archived
+  .elf: ProjectileUpdate -> DarkNutSwordSlash.
+
+- **A manifest with four changelog lines bricked the in-game updater.**
+  JsonChangelog returned 0 on the entry past its cap of three, which fails
+  TmcUpdate_ParseManifest outright, so the game reported "Update manifest
+  rejected". v1.3.2 was the first release to ship four lines; the updater has
+  been dead since. The published manifest was trimmed by hand to restore every
+  install already out there -- a code fix cannot reach a copy whose updater is
+  broken. Here the cap rises to 8 and an overflow is skipped instead of fatal.
+
+- **The v1.3.3 crash-report anchor named the wrong process.** A crash is stored
+  as crash_pending.bin and rendered by the next boot, so printing the anchor at
+  write time described that later process, not the one holding the registers.
+  digdat0's reports proved it: anchor 0xAB962EF0 minus its .elf address gave the
+  base of the process that WROTE the log. It is now sampled at capture time and
+  carried in the blob (context version 3).
+
+### Diagnostics
+
+- Crash reports name the script command being dispatched. A ScriptCommand_*
+  handler that faults leaves no frame of its own -- digdat0's Tingle crash
+  resolved to ExecuteScript and stopped, with 0x8a candidates and no way to
+  narrow it. Recorded in the crash context rather than a breadcrumb, since
+  scripts step every frame and would flush the ring.
+
+### Still open
+
+- Talking to a Tingle sibling in Hyrule Field crashes inside a script command
+  handler. Not fixed; the next report will name the command.
+
 ## v1.3.3 — Lake Hylia crash, and achievements that really work offline
 
 Hotfix for a reproducible crash entering Lake Hylia while heading to Syrup's
