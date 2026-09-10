@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "1.3.3",
+  "version": "1.3.5",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.3.3/tmc_aleks_ultimate_nx_v1.3.3.nro",
-  "nro_sha256": "2cd63de916b1e9a76645a9f6369df09b1cd911bc5b8e392a9ceaff7059162150",
-  "nro_size": 14210739,
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.3.5/tmc_aleks_ultimate_nx_v1.3.5.nro",
+  "nro_sha256": "b672b0a840f0bd790619e74e9cc0a828318ddb719d3911fdc72753d7901b172c",
+  "nro_size": 14218931,
   "min_updater_schema": 1,
   "changelog": [
-    "Fixes save files being lost when the game is closed while saving",
-    "Fixes a crash entering Lake Hylia, and offline achievements",
-    "Connect once after updating so achievements can work offline"
+    "Fixes v1.3.3 freezing when it creates a save file",
+    "Fixes a crash on screen transitions near Lon Lon Ranch",
+    "Restores the in-game updater, broken since v1.3.2"
   ]
 }
