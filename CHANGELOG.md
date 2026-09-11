@@ -1,5 +1,27 @@
 # Changelog
 
+## v1.3.6 — Tingle and Lake Hylia hotfix
+
+### Fixed
+
+- **Talking to a Tingle sibling crashed in Hyrule Field.** The port's
+  `GetFuserId` compatibility function carries two GBA return registers in one
+  64-bit value: the fuser ID in the low word and the dialogue ID in the high
+  word. Tingle used the full packed value as an index into the save, producing
+  an address far outside `fuserProgress`. Scalar callers now explicitly take
+  the low word; all affected NPC callers were migrated and guarded by a
+  regression check.
+
+- **The Lon Lon Ranch to Lake Hylia transition could freeze on white, then
+  crash after reopening the game.** Both hardware reports faulted in
+  `ExecuteScript` for Festari with a null context. On the 64-bit port the
+  authoritative script pointer lives in a per-entity side table. Festari and
+  Stockwell now read that table and skip script work when no context exists;
+  `ExecuteScript` also rejects a null context at its boundary.
+
+- **Recycled entity slots could retain a dead script context.** Entity deletion
+  now clears the corresponding side-table entry before the slot is reused.
+
 ## v1.3.5 — the v1.3.3 save freeze
 
 ### Fixed
