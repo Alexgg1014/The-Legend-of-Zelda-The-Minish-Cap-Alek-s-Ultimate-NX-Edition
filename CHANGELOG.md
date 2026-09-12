@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.3.7 — Cave of Flames collision hotfix
+
+### Fixed
+
+- **Link could walk on magma and pass through the movable stone barriers in
+  the Cave of Flames boss-door room.** The native port had inverted one branch
+  from the original GBA layer-transition routine. Crossing the affected cells
+  incorrectly moved Link to the upper logical map layer while the room's lava
+  and solid geometry remained on the lower layer.
+
+- **The Gust Jar and Cane of Pacci appeared to stop working in the same area.**
+  Their effects now stay on the same collision layer as Link and the room
+  geometry, restoring item interactions after crossing those cells.
+
 ## v1.3.6 — Tingle and Lake Hylia hotfix
 
 ### Fixed

@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "1.3.6",
+  "version": "1.3.7",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.3.6/tmc_aleks_ultimate_nx_v1.3.6.nro",
-  "nro_sha256": "743587f395d8f9fb2e631f7d4c11a2045f9d154c90f583daa205db010530939d",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.3.7/tmc_aleks_ultimate_nx_v1.3.7.nro",
+  "nro_sha256": "36caae21b7064b57a33591155b976d6211fb167943a5c555c0526bf141a62781",
   "nro_size": 14218931,
   "min_updater_schema": 1,
   "changelog": [
-    "Fixes the Tingle sibling crash in Hyrule Field",
-    "Fixes the Lon Lon Ranch to Lake Hylia freeze and crash",
-    "Adds script-context guards for room transitions"
+    "Fixes walkable magma in the Cave of Flames boss-door room",
+    "Restores collision with the room's movable stone barriers",
+    "Restores Gust Jar and Cane of Pacci interactions in that area"
   ]
 }
