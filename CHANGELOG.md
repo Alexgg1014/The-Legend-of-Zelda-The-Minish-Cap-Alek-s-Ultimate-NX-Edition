@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.3.71 — Castor Wilds Eyegore hotfix
+
+### Fixed
+
+- **Eyegore statues in Castor Wilds kept their eyes closed and rejected bow
+  shots.** A 64-bit structure-layout mismatch made the statues read entity
+  metadata as their puzzle-completion flag, disabling their collision before
+  the eye could open. Their fields now align with the original GBA layout, so
+  arrows hit correctly and the bow puzzle can be completed.
+
 ## v1.3.7 — Cave of Flames collision hotfix
 
 ### Fixed
