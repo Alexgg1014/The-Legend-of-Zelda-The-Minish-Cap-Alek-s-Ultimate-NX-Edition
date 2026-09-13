@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.3.72 — Fortress of Winds and update notification
+
+### Fixed
+
+- **WallMasters and FloorMasters now detect and pursue Link correctly.** Their
+  64-bit AI state layout now matches the original game, repairing the
+  FloorMaster encounter in the Fortress of Winds Minish portal room.
+
+### Added
+
+- **Update popup.** When the game finds a newer release, it now shows an
+  in-game notification with the target version and a short summary of the
+  published changelog. Offline checks remain silent.
+
 ## v1.3.71 — Castor Wilds Eyegore hotfix
 
 ### Fixed
