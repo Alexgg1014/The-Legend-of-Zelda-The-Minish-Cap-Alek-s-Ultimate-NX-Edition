@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.3.73 — Mazaal third-phase hotfix
+
+### Fixed
+
+- **Mazaal's vulnerable pillar now appears during the third inner phase.**
+  Assigning the boss's child entity previously overwrote nearby phase state
+  because a pointer is wider on the 64-bit Switch port than on GBA. The Mazaal
+  head and pillar structures now preserve the original field layout, allowing
+  the Fortress of Winds boss fight to be completed.
+
 ## v1.3.72 — Fortress of Winds and update notification
 
 ### Fixed

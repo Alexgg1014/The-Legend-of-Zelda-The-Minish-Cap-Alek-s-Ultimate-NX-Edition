@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "1.3.72",
+  "version": "1.3.73",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.3.72/tmc_aleks_ultimate_nx_v1.3.72.nro",
-  "nro_sha256": "2735975248038b1882791c7691ea2ea3799c23097159e8b58efb337ddd041d7e",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.3.73/tmc_aleks_ultimate_nx_v1.3.73.nro",
+  "nro_sha256": "da2250af001fca8f096fdcbe14fd997203ca66eea7edcd8cc30048beb4f9e25d",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Fixes Fortress of Winds WallMaster and FloorMaster AI",
-    "Adds an in-game popup when a newer version is found",
-    "Shows a short changelog summary in the update popup"
+    "Fixes Mazaal's missing pillar in the third inner phase",
+    "Restores the boss's 64-bit phase-state layout",
+    "Allows the Fortress of Winds boss fight to be completed"
   ]
 }
