@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.3.74 — Hyrule Town Minish doors hotfix
+
+### Fixed
+
+- **Minish-sized doors in Hyrule Town no longer vanish (#9).** Doors spawned
+  by the Minish entrance manager checked its "spawned" bitfield through an
+  Entity field that only overlapped it on GBA. On the 64-bit Switch port the
+  manager structure is wider, so the check read pointer bits, failed, and
+  every door deleted itself one frame after appearing. Doors now read the
+  manager's real bitfield.
+- **House signs, Goron merchant kinstone pieces, pushable-furniture
+  puzzles and angry statues** used the same GBA-only overlap to report back to their manager
+  and could not do so on Switch. They now write the manager's real field.
+
 ## v1.3.73 — Mazaal third-phase hotfix
 
 ### Fixed
