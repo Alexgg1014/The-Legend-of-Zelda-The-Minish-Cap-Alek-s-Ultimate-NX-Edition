@@ -1,5 +1,30 @@
 # Changelog
 
+## v1.3.8 — Entity layout audit
+
+### Fixed
+
+- **Every entity type audited for 64-bit layout drift.** The last four
+  hotfixes (Eyegore, WallMaster, Mazaal, Minish doors) were all the same
+  defect: the Switch port widens pointers inside entities, so the game's
+  generic code and each enemy/object's own state disagreed about where fields
+  live. All ~130 entity structures were compared against the original GBA
+  layout and corrected, with compile-time checks so it cannot regress.
+  Affected: enemies whose wander/return position was overwritten by their own
+  state (blade traps, flying pots, leevers, keatons, lakitus, darknuts,
+  madderpillars, business scrubs, gibdos, Gleerok, Moldorm, Moldworm, Gyorg's
+  children…), enemies with state inside the widened child pointer (mini
+  slimes, mini fireball guys, wizzrobes, Vaati forms, Octorok boss), and
+  objects whose room flags were read from the wrong bytes (warp points, heart
+  containers, locked/metal/boss doors, eye switches, buttons, levers, statues,
+  fans, bookshelves, pots, jail bars, pressure plates, spider webs…).
+- **Moldorm and Gibdo no longer write past their own entity** into the next
+  entity's link pointers.
+- **Business scrubs** now see their room flag; **the picolyte bottle NPC** no
+  longer has its state clobbered by the script engine; **Gyorg** reads its
+  male half's state from the right place; per-enemy range parameters from
+  room data are honoured again.
+
 ## v1.3.74 — Hyrule Town Minish doors hotfix
 
 ### Fixed

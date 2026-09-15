@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "1.3.74",
+  "version": "1.3.8",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.3.74/tmc_aleks_ultimate_nx_v1.3.74.nro",
-  "nro_sha256": "283a242a2e9f3970d6e9c18b746e697aae992be0a1df48473b5bb8020371458b",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.3.8/tmc_aleks_ultimate_nx_v1.3.8.nro",
+  "nro_sha256": "8cf76683bed662db353fe8744e52521b7a0c7cc8c4e6916b0138839cd804f372",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Fixes vanishing Minish doors in Hyrule Town (#9)",
-    "Fixes house signs, Goron shop items and furniture puzzles",
-    "Restores 64-bit manager-field layouts for those objects"
+    "Audits and fixes 64-bit layouts of ~130 entity types",
+    "Repairs enemy home ranges, boss parts and object flags",
+    "Stops Moldorm and Gibdo from corrupting neighbouring entities"
   ]
 }
