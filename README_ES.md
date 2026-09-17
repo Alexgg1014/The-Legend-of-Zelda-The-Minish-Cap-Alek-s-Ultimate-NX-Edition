@@ -112,6 +112,12 @@ Pantalla ancha (v1.4.0), 240 columnas nativas junto a la vista 16:9 de 284:
 ![Overlays BG3 en toda la vista](docs/screenshots/widescreen/04_bg3_overlay_clouds.png)
 ![Oclusión en puertas](docs/screenshots/widescreen/03_stairs_occlusion.png)
 
+Ajustes (v1.4.0): la página de Calidad de vida, los atajos y pantalla ancha:
+
+| CALIDAD DE VIDA | CONTROLES | PANTALLA ANCHA |
+|---|---|---|
+| ![QoL](docs/screenshots/settings/10_qol_page1.jpg) | ![Controles](docs/screenshots/settings/12_controls_softslots.jpg) | ![Pantalla ancha](docs/screenshots/settings/13_display_widescreen_on.jpg) |
+
 Desbloqueo real de un logro, en hardware real, en el Santuario del Bosque:
 
 ![Desbloqueo de RetroAchievements](docs/screenshots/achievements/08_retroachievements_dungeon_map.jpg)

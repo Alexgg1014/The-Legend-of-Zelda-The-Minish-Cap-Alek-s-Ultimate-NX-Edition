@@ -106,6 +106,12 @@ Widescreen (v1.4.0), native 240 columns next to the 284-column 16:9 view:
 ![BG3 overlays across the view](docs/screenshots/widescreen/04_bg3_overlay_clouds.png)
 ![Doorway occlusion](docs/screenshots/widescreen/03_stairs_occlusion.png)
 
+Settings (v1.4.0): the Quality-of-life page, shortcut slots, and widescreen on/off:
+
+| QUALITY OF LIFE | CONTROLS | WIDESCREEN |
+|---|---|---|
+| ![QoL](docs/screenshots/settings/10_qol_page1.jpg) | ![Controls](docs/screenshots/settings/12_controls_softslots.jpg) | ![Widescreen](docs/screenshots/settings/13_display_widescreen_on.jpg) |
+
 Real achievement unlock, on real hardware, in Deepwood Shrine:
 
 ![RetroAchievements unlock](docs/screenshots/achievements/08_retroachievements_dungeon_map.jpg)
