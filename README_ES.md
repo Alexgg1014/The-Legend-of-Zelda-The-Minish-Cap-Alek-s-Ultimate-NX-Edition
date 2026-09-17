@@ -6,20 +6,22 @@
 
 # The Legend of Zelda: The Minish Cap — Alek's Ultimate NX Edition
 
-**v1.0.2** · Port homebrew nativo para Nintendo Switch · [English → README.md](README.md)
+**v1.3.9** · Port homebrew nativo para Nintendo Switch · [English → README.md](README.md)
 
 ![Juego a doble pantalla en Nintendo Switch](docs/screenshots/hero/01_hero_dual.jpg)
 
 ## ¿Qué es esto?
 
-Una edición personal, centrada en Nintendo Switch, del port nativo de *The
-Minish Cap*, construida sobre la descompilación de código abierto y los
-proyectos de port nativo listados en [CREDITS.md](CREDITS.md). El juego corre
-de forma nativa en la Switch — no es un emulador — y añade una segunda
-pantalla de compañía, interacción táctil, RetroAchievements, una interfaz del
-port localizada y varias mejoras de calidad de vida específicas de Switch.
+Una edición centrada en Nintendo Switch del port nativo de *The Minish Cap*,
+construida sobre la descompilación de código abierto y los proyectos de port
+nativo listados en [CREDITS.md](CREDITS.md). El juego corre de forma nativa en
+la Switch — no es un emulador — y añade una segunda pantalla de compañía,
+interacción táctil y por mando, RetroAchievements, una traducción completa del
+juego al portugués de Brasil, una interfaz del port localizada, un
+actualizador integrado y varias mejoras de calidad de vida específicas de
+Switch.
 
-Lo hice principalmente porque quería jugar *The Minish Cap* de esta manera
+Lo hice porque quería jugar *The Minish Cap* de esta manera
 concreta en mi propia Switch: con una disposición a doble pantalla al estilo
 de los Zelda de DS, un modo vertical tipo Flip Grip y logros. Se comparte
 públicamente por si otras personas quieren jugarlo, estudiarlo, hacer un fork
@@ -33,7 +35,7 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
 
 - **Compilación nativa para Switch** — sin emulador, funciona como homebrew (NRO).
 - **Tres modos de pantalla**
-  - **NORMAL** — presentación clásica a una sola pantalla.
+  - **NORMAL** — presentación clásica a una sola pantalla (Fit o 2×/3×/4× exacto).
   - **DUAL** — el juego más un panel de segunda pantalla, lado a lado.
   - **FLIP 270** — composición vertical pensada para girar físicamente la
     Switch (funciona muy bien con un soporte tipo Flip Grip; sin afiliación
@@ -41,35 +43,51 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
 - **Panel de segunda pantalla** con cuatro pestañas:
   - **MISIÓN** — misión principal actual, objetivo, pista y ubicación (Guía de
     Historia).
-  - **MAPA** — mapas del mundo y de mazmorras con el marcador de posición de
-    Link en vivo y cámara de seguimiento opcional.
-  - **OBJETOS** — vista de equipo con los anillos A/B y los atajos X/Y/ZL/ZR.
-  - **CONFIG** — todos los ajustes del port.
-- Interacción **táctil** en el panel (pestañas, ajustes, asignación de objetos).
+  - **MAPA** — mapas del mundo y de mazmorras con el marcador de Link en vivo,
+    marcas de windcrests, vuelta automática de piso y cámara de seguimiento
+    opcional.
+  - **OBJETOS** — vista de equipo con los anillos A/B y los atajos X/Y/ZL/ZR
+    (soft slots: un tercer y cuarto objeto sin abrir el menú de pausa).
+  - **AJUSTES** — todos los ajustes del port, el actualizador y la info del build.
+- **Funciona con táctil o con mando.** En modo NORMAL el panel se abre como
+  superposición con **Menos** y se queda en cualquier pestaña: la cruceta
+  mueve, **A / B** activan (en OBJETOS: equipar en la ranura A o B), **L / R**
+  cambian de pestaña, y **A** sobre el mapa abre la región donde está Link.
+- **Traducción completa del juego al portugués de Brasil** (todos los
+  diálogos, carteles y descripciones — 2910 mensajes), sobre la ROM USA. Se
+  elige en AJUSTES → GENERAL → IDIOMA.
 - **RetroAchievements** — inicio de sesión, reconocimiento del juego, Rich
-  Presence, notificaciones reales de desbloqueo con la insignia real, y cierre
-  de sesión. Requiere una cuenta gratuita de
+  Presence, notificaciones de desbloqueo con la insignia real, y **juego sin
+  conexión**: los logros conseguidos offline se guardan con su hora original y
+  se envían al reconectar (solo softcore, según la política de
+  RetroAchievements). Requiere una cuenta gratuita de
   [retroachievements.org](https://retroachievements.org).
+- **Partidas intercambiables con emuladores** — `tmc.sav` usa el mismo orden
+  de bytes que mGBA / VBA-M / volcados de cartucho (desde la v1.3.9). Cópialo
+  como `<rom>.sav` o de vuelta, sin conversión.
 - **Autoguardado gestionado por el port** y **Cargar Autoguardado** —
   separados del sistema de guardado propio del juego; nunca lo sobrescriben.
 - **Actualizador integrado** — busca, descarga e instala versiones nuevas desde
-  la segunda pantalla (SYSTEM), sin PC. La descarga se verifica contra un
-  tamaño y un SHA-256 fijados de antemano, y se crea una copia de seguridad
-  verificada de tu versión actual antes de reemplazar nada; si algún paso
-  falla, se restaura la copia y tu juego instalado queda intacto. Ver
-  [Actualizar](#actualizar).
-- **Volver al Título** desde el menú.
-- **Interfaz del port localizada** en English, Español, Français, Deutsch e
-  Italiano. (La localización de los diálogos originales del juego es de
-  Nintendo; este proyecto solo localiza la interfaz añadida por el port.)
-- **Ayuda de Acción** — la ayuda contextual del botón R en el panel puede
-  ponerse en NO / CONTEXTUAL / SÍ.
-- **Tiempo de arranque sustancialmente reducido** (Fast Boot). Se observó un
-  tiempo de inicio de aproximadamente 13–14 segundos en el hardware probado
-  por el mantenedor; el tiempo real puede variar según la tarjeta SD y las
-  condiciones del sistema.
+  la segunda pantalla, sin PC. La descarga se verifica contra un tamaño y un
+  SHA-256 fijados en el manifiesto, antes se hace una copia verificada de tu
+  versión actual, y cualquier fallo la restaura. Ver [Actualizar](#actualizar).
+- Atajo **Hablar con Ezlo** (click del stick izquierdo por defecto,
+  reasignable), entrada **Volver al Título**, y **Ayuda de Acción** contextual
+  para el botón R (NO / CONTEXTUAL / SÍ).
+- **Interfaz del port localizada** en English, Español, Français, Deutsch,
+  Italiano y Português (Brasil). (La localización de los diálogos originales
+  es de Nintendo; este proyecto localiza la interfaz añadida por el port y
+  aporta la traducción PT-BR del juego como trabajo propio.)
+- **Fast Boot** — arranque de unos 13–14 s en el hardware probado; el tiempo
+  real depende de la tarjeta SD.
+- **Motor reforzado** — la línea 1.3.x auditó todos los tipos de entidad
+  contra desfases de layout de 64 bits (~130 estructuras, cada una con
+  comprobación en compilación), portó las correcciones de motor del port de
+  PC hasta su v0.9.3 y cerró los crashes y bloqueos reportados por la
+  comunidad. Detalles en [CHANGELOG.md](CHANGELOG.md).
 
-El widescreen real **no** forma parte de la v1.0.0.
+**Widescreen** (16:9 real con más mundo en pantalla, sin estirar) está en
+desarrollo para la **v1.4** y no forma parte de la v1.3.9.
 
 ## Capturas
 
@@ -140,10 +158,30 @@ Versión corta — guía completa en
 ROMs y no distribuye contenido del juego con derechos de autor.** Debes volcar
 tu propio cartucho u obtener el juego legalmente.
 
+### Partidas guardadas
+
+- `/switch/tmc/tmc.sav` es la partida del juego (los tres archivos internos).
+  Desde la **v1.3.9** se escribe en el orden de bytes estándar de los
+  emuladores, así que puedes copiarla a mGBA / VBA-M como `<rom>.sav` y de
+  vuelta sin conversión. Las partidas de versiones anteriores se detectan y
+  cargan solas.
+- **Una partida escrita por la v1.3.9 o posterior no carga en la v1.3.8 o
+  anteriores.** Si alguna vez vuelves atrás, restaura `tmc.sav.bak` (copia
+  que se hace en cada arranque).
+- Los autoguardados (`autosave_*.bin`) son del port y son independientes de
+  `tmc.sav`.
+
+### Tras actualizar: la carpeta `assets/`
+
+El primer arranque extrae los assets del juego desde tu ROM a
+`/switch/tmc/assets/`. **Actualizar el NRO no refresca esa carpeta.** Si tras
+una actualización ves gráficos o textos raros, borra `assets/` y vuelve a
+lanzar el juego — se regenera en un minuto. Las partidas no se tocan.
+
 ## Actualizar
 
-A partir de la v1.0.0, el juego puede actualizarse solo. En la segunda pantalla
-ve a **CONFIG → SYSTEM** y usa la fila de actualización:
+En la segunda pantalla ve a **AJUSTES → SISTEMA** y usa la fila de
+actualización:
 
 1. **CHECK FOR UPDATES** — consulta el manifiesto de actualización del proyecto.
 2. **DOWNLOAD UPDATE** — descarga la nueva versión y la verifica.
@@ -180,13 +218,12 @@ la [página de releases](../../releases) y cópialo tú sobre
 
 ## Compatibilidad de ROM
 
-La versión v1.0.0 está construida para la edición **USA** (cabecera `BZME`).
-El volcado USA de referencia conocido tiene el SHA-1
+Las versiones publicadas están construidas para la edición **USA** (cabecera
+`BZME`). El volcado USA de referencia conocido tiene el SHA-1
 `b4bd50e4131b027c334547b4524e2dbbd4227130` — el port no verifica este hash en
 tiempo de ejecución (identifica el juego por la cabecera), pero ese es el
-volcado con el que esta versión se compiló y probó. El cargador reconoce
-cabeceras EU (`BZMP`), pero la v1.0.0 se compila y prueba como edición USA;
-usa una ROM USA.
+volcado con el que se compila y prueba cada versión. El cargador reconoce
+cabeceras EU (`BZMP`), pero no es una base soportada; usa una ROM USA.
 
 ## Rendimiento
 
@@ -199,7 +236,7 @@ en evaluación. Detalles en [docs/PERFORMANCE.md](docs/PERFORMANCE.md).
 
 ## Configuración
 
-Todos los ajustes de CONFIG (JUEGO, CONTROLES, PANTALLA, LOGROS, SISTEMA)
+Todos los ajustes de AJUSTES (JUEGO, CONTROLES, PANTALLA, LOGROS, SISTEMA)
 están documentados en [docs/CONFIGURATION_ES.md](docs/CONFIGURATION_ES.md).
 
 ## Transparencia de desarrollo
@@ -230,29 +267,25 @@ son bienvenidos bajo las licencias upstream aplicables — consulta
 
 Las versiones publicadas guardan diagnósticos en la tarjeta, para que un
 reporte pueda llevar pruebas. Adjunta lo que exista de esta lista, junto con la
-versión que aparece en **CONFIG → SYSTEM → BUILD INFO**:
+versión que aparece en **AJUSTES → SISTEMA → BUILD INFO**:
 
 | Archivo | Qué es |
 |---|---|
 | `/switch/tmc/tmc.log` | Registro de arranque: identidad del build, carga de assets, resolución de la ROM, errores. Empieza con una línea `[build]` con la versión exacta — inclúyelo siempre. |
 | `/switch/tmc/startup.log` | Tiempos de arranque por fase. Útil si el juego tarda mucho o se cuelga al arrancar. |
-| `/switch/tmc/crashlogs/` | Solo se escribe si el juego ha crasheado. |
+| `/switch/tmc/crashlogs/` | Solo se escribe si el juego ha crasheado — **es el archivo que importa en un crash**; `tmc.log` solo casi nunca basta. |
+| `/switch/tmc/ra.log` | Actividad de RetroAchievements, para reportes de logros. |
 | `/atmosphere/crash_reports/` | El informe de crash del propio sistema, del mismo momento. |
 
-Una captura ayuda muchísimo en cualquier fallo visual — el arreglo del Monte
-Crenel de la v1.0.1 se diagnosticó a partir de una.
-
-Estos archivos los escribe la v1.0.2 en adelante. En versiones anteriores no
-existen: el registro estaba desactivado al compilar, así que no hay nada que
-buscar.
+Una captura o un vídeo corto ayuda muchísimo en cualquier fallo visual, y tu
+`tmc.sav` permite reproducir el problema exactamente. Di también si borraste
+`assets/` después de actualizar (ver arriba): una carpeta de assets vieja
+explica muchos reportes de "gráficos raros".
 
 ## Problemas conocidos
 
-Consulta [docs/KNOWN_ISSUES_ES.md](docs/KNOWN_ISSUES_ES.md). Dos notas
-destacadas: en escenas exigentes DUAL y FLIP pueden bajar de 60 FPS, y tras
-visitar el barril giratorio de Deepwood Shrine, volver a la pantalla de título
-puede provocar artefactos visuales/afines temporales — reiniciar la aplicación
-restaura la pantalla de título normalmente.
+Consulta [docs/KNOWN_ISSUES_ES.md](docs/KNOWN_ISSUES_ES.md). En escenas
+exigentes DUAL y FLIP pueden bajar de 60 FPS.
 
 ## Créditos y linaje
 
@@ -261,13 +294,20 @@ Esta edición existe gracias a los proyectos siguientes. La versión corta:
 - [zeldaret/tmc](https://github.com/zeldaret/tmc) — la descompilación de
   Minish Cap sobre la que se construye todo.
 - [Project Picori (999sian/tmc)](https://github.com/999sian/tmc) — la base del
-  port nativo para PC.
+  port nativo para PC. Sus correcciones de motor se portan a esta edición con
+  regularidad (hasta su v0.9.3 en la v1.3.9), y su trabajo de widescreen es la
+  base de la próxima v1.4.
+- [HayatoG/tmc](https://github.com/hayatog/tmc) — el port original para
+  Nintendo Switch y la base directa de la que parte este árbol.
 - [samyost1/tmc-android](https://github.com/samyost1/tmc-android) — el
   concepto e implementación de doble pantalla que este trabajo extiende.
 - [EstebanPdN/zelda-tmc-3ds](https://github.com/EstebanPdN/zelda-tmc-3ds) —
-  la adaptación a doble pantalla para 3DS usada como referencia.
-- [HayatoG/tmc](https://github.com/hayatog/tmc) — la base directa de la que
-  parte este árbol para Switch.
+  la adaptación a doble pantalla para 3DS; varias de sus correcciones de motor
+  están portadas aquí.
+
+Gracias a todos los que prueban en hardware real y reportan en GBAtemp y
+GitHub — la mayoría de los arreglos de la 1.3.x empezaron como un reporte
+vuestro.
 
 Roles completos, bibliotecas de terceros y detalles de licencias:
 [CREDITS.md](CREDITS.md) · [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
