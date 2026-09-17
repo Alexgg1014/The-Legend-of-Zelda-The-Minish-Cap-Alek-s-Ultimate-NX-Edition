@@ -33,6 +33,14 @@ below — please see [CREDITS.md](CREDITS.md) for the full lineage.
 ## Features
 
 - **Native Switch build** — no emulator, runs as homebrew (NRO).
+- **Widescreen (16:9)** in NORMAL mode: the camera shows more of the room on
+  both sides, text boxes stay centred and the HUD anchors to the edges. Rooms
+  narrower than the view are pillarboxed, never stretched. Holds 60 FPS at the
+  stock CPU clock thanks to the tile-based renderer.
+- **Quality of life** (SETTINGS → GAMEPLAY → QUALITY OF LIFE, all toggles):
+  360° stick movement, spin attack by rolling the stick and pressing B, a
+  one-button roll attack, shells cap 9999, no Ezlo hint after loading a save,
+  fairer figurine odds, optional Hero Mode and Ezlo-tutorial skip.
 - **Three display modes**
   - **NORMAL** — classic single-screen presentation (Fit or exact 2×/3×/4×).
   - **DUAL** — gameplay plus a second-screen companion panel, side by side.
@@ -90,6 +98,13 @@ development for **v1.4** and is not part of v1.3.9.
 | DUAL | NORMAL | FLIP 270 |
 |---|---|---|
 | ![DUAL](docs/screenshots/gameplay/02_dual_gameplay.jpg) | ![NORMAL](docs/screenshots/gameplay/03_normal.jpg) | ![FLIP](docs/screenshots/flip/06_flip270.jpg) |
+
+Widescreen (v1.4.0), native 240 columns next to the 284-column 16:9 view:
+
+![Widescreen town](docs/screenshots/widescreen/02_widescreen_town.png)
+![Widescreen dialogue and HUD](docs/screenshots/widescreen/05_widescreen_dialogue_hud.png)
+![BG3 overlays across the view](docs/screenshots/widescreen/04_bg3_overlay_clouds.png)
+![Doorway occlusion](docs/screenshots/widescreen/03_stairs_occlusion.png)
 
 Real achievement unlock, on real hardware, in Deepwood Shrine:
 
@@ -210,11 +225,12 @@ recognized by the loader but is not a supported base; use a USA ROM.
 
 ## Performance
 
-NORMAL runs at 60 FPS with the most headroom. DUAL and FLIP are more demanding
-than NORMAL. On tested hardware, a 1224 MHz CPU clock is recommended for
-performance closer to a consistent 60 FPS in DUAL and FLIP. This is optional
-and does not guarantee a locked 60 FPS in every scene. Details in
-[docs/PERFORMANCE.md](docs/PERFORMANCE.md).
+NORMAL (including widescreen) runs at 60 FPS at the stock CPU clock since
+v1.4.0, when the software PPU moved from per-pixel to per-tile rendering.
+DUAL and FLIP are more demanding than NORMAL and also gained from that
+change; on tested hardware a 1224 MHz CPU clock still gives them the most
+consistent 60 FPS. This is optional and does not guarantee a locked 60 FPS in
+every scene. Details in [docs/PERFORMANCE.md](docs/PERFORMANCE.md).
 
 ## Configuration
 

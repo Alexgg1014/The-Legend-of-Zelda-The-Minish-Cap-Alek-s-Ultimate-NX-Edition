@@ -34,6 +34,16 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
 ## Características
 
 - **Compilación nativa para Switch** — sin emulador, funciona como homebrew (NRO).
+- **Pantalla ancha (16:9)** en modo NORMAL: la cámara muestra más sala a ambos
+  lados, los cuadros de texto quedan centrados y el HUD se ancla a los bordes.
+  Las salas más estrechas que la vista se muestran con bandas, nunca
+  estiradas. Mantiene 60 FPS con la CPU a frecuencia de serie gracias al
+  renderizador por tiles.
+- **Calidad de vida** (AJUSTES → GAMEPLAY → CALIDAD DE VIDA, todo con
+  interruptor): movimiento de 360° con el stick, ataque giratorio dibujando un
+  círculo con el stick y pulsando B, ataque de voltereta con un botón, tope de
+  conchas 9999, sin pista de Ezlo al cargar partida, figuras con mejores
+  probabilidades, y opcionales Modo Héroe y saltar tutoriales de Ezlo.
 - **Tres modos de pantalla**
   - **NORMAL** — presentación clásica a una sola pantalla (Fit o 2×/3×/4× exacto).
   - **DUAL** — el juego más un panel de segunda pantalla, lado a lado.
@@ -94,6 +104,13 @@ desarrollo para la **v1.4** y no forma parte de la v1.3.9.
 | DUAL | NORMAL | FLIP 270 |
 |---|---|---|
 | ![DUAL](docs/screenshots/gameplay/02_dual_gameplay.jpg) | ![NORMAL](docs/screenshots/gameplay/03_normal.jpg) | ![FLIP](docs/screenshots/flip/06_flip270.jpg) |
+
+Pantalla ancha (v1.4.0), 240 columnas nativas junto a la vista 16:9 de 284:
+
+![Pantalla ancha en Hyrule Town](docs/screenshots/widescreen/02_widescreen_town.png)
+![Diálogo y HUD en pantalla ancha](docs/screenshots/widescreen/05_widescreen_dialogue_hud.png)
+![Overlays BG3 en toda la vista](docs/screenshots/widescreen/04_bg3_overlay_clouds.png)
+![Oclusión en puertas](docs/screenshots/widescreen/03_stairs_occlusion.png)
 
 Desbloqueo real de un logro, en hardware real, en el Santuario del Bosque:
 
@@ -227,10 +244,12 @@ cabeceras EU (`BZMP`), pero no es una base soportada; usa una ROM USA.
 
 ## Rendimiento
 
-NORMAL funciona a 60 FPS con el mayor margen. DUAL y FLIP son más exigentes
-que NORMAL. En el hardware probado, se recomienda una frecuencia de CPU de
-1224 MHz para acercarse más a una experiencia estable de 60 FPS. Es opcional y
-no garantiza 60 FPS fijos en todas las escenas. El port nunca cambia la
+NORMAL (incluida la pantalla ancha) funciona a 60 FPS con la CPU a frecuencia
+de serie desde la v1.4.0, cuando la PPU por software pasó de renderizar por
+píxel a hacerlo por tile. DUAL y FLIP son más exigentes que NORMAL y también
+mejoraron; en el hardware probado, 1224 MHz de CPU sigue dando en ellos los
+60 FPS más estables. Es opcional y no garantiza 60 FPS fijos en todas las
+escenas. El port nunca cambia la
 frecuencia por su cuenta; la integración automática con gestores de reloj sigue
 en evaluación. Detalles en [docs/PERFORMANCE.md](docs/PERFORMANCE.md).
 

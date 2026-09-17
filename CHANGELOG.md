@@ -1,5 +1,43 @@
 # Changelog
 
+## v1.4.0 — Widescreen, tile renderer, quality of life
+
+### Added
+
+- **Widescreen 16:9 (284×160) in NORMAL mode**: wider camera, centred text
+  box, HUD anchored to the edges; narrow rooms pillarboxed. BG3 overlays
+  (cloud shadows, light rays, darkness, steam, rain) cover the whole view.
+  SETTINGS → DISPLAY → SCREEN → WIDESCREEN, on by default.
+- **Quality-of-life switchboard** (SETTINGS → GAMEPLAY → QUALITY OF LIFE):
+  360° stick movement, spin attack by stick circle + B (1.5 s cooldown),
+  one-button roll attack (CONTROLS → ROLL ATTACK, default RSTICK, refuses a
+  button shared with TALK TO EZLO), shells cap 9999, no Ezlo hint after
+  loading a save, figurine odds floor 20 %, Hero Mode, skip Ezlo tutorials.
+  Persisted as `reborn_mask` / `roll_attack_button` in `config.json`.
+- Settings pages with more than six rows are paged (MORE row); SYSTEM never
+  pages; long values shrink instead of being cut.
+
+### Changed
+
+- **Software PPU renders per tile instead of per pixel** (backgrounds, sprites,
+  compositing). Widescreen holds 60 FPS at 1020 MHz; DUAL/FLIP gain too.
+  Verified pixel-identical against the previous renderer on 41 scripted
+  captures.
+
+### Fixed
+
+- **Link over the door frame on house stairs / doorways / swamp sink**: the
+  PPU implements GBA OBJ priority propagation (transparent higher-priority
+  sprite lifts the sprite beneath — how `Object70` works), and the crash-
+  context snapshot no longer calls `GetTileHazardType`, which rewrote Link's
+  layer and priority every frame.
+- Player items with an out-of-range id are dropped and logged instead of
+  dispatching through garbage.
+- Upstream 999sian/tmc post-0.9.3: `CheckRegionOnScreen` uses the effective
+  view width; rolling room transitions run native and restore the wide camera;
+  Minish Woods rays across the view; `sittingPerson` writes `condition` by
+  name on 64-bit.
+
 ## v1.3.9 — Community fixes, upstream sweep, second-screen controls
 
 ### Fixed
