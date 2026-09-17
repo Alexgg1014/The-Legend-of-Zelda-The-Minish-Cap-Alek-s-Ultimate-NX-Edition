@@ -1,5 +1,36 @@
 # Changelog
 
+## v1.3.9 — Community fixes, upstream sweep, second-screen controls
+
+### Fixed
+
+- **Library bookshelf Minish could not be talked to** (GBAtemp report): the
+  C-defined entity entry lacked the "scripted" flag bit, so the NPC never
+  attached its script or registered as interactable.
+- **Link half-hidden walking into house stairs / doorways and during the
+  swamp sink**: the head-overlay sprite GBA draws is not rendered by the port;
+  Link now keeps OBJ priority 2 (upstream / 3DS approach).
+- **Second screen in Normal display mode vanished on Quest / Map / Items**: the
+  overlay is now latched open by Minus independently of the tab.
+- **Saves interchangeable with mGBA / VBA-M / cart dumps**: EEPROM blocks are
+  now written in stream order; both orders auto-detected on load. A 1.3.8 or
+  earlier NRO will not read a save written by 1.3.9.
+- **Upstream 999sian/tmc v0.9.3 engine fixes ported** (verified by content):
+  GBA-accurate entity update order and enemy-target reset; BIOS `ObjAffineSet`;
+  full ice-velocity table; Great Fairy light (#87); Gregal softlock (#55);
+  castle garden knights (#129); `gPaletteList[15]` alias; nine per-room entity
+  lists filled from ROM (Mayor's house/cabin, Happy Hearth Inn 2F oracles);
+  Vaati Reborn, ChuChu boss, Gyorg, tennis-ball and mushroom entity-pool
+  guards; item-get retry; `{Player}` in figurine screens; Goron Kinstone
+  callbacks; OOB guards (gfx groups, text banks, room properties, exit lists);
+  GFX slot allocation/compaction guards; HDMA stopped between rooms;
+  `GetEmptyEntity` NULL; NPC init retries on graphics exhaustion.
+
+### Added
+
+- Normal-mode second screen: 2-D D-pad navigation on Quest / Map / Items,
+  A / B equip on Items, L / R cycle tabs, A on the map opens Link's region.
+
 ## v1.3.8 — Entity layout audit
 
 ### Fixed
