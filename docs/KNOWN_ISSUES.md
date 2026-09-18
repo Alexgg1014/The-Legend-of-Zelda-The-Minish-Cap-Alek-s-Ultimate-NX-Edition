@@ -11,6 +11,11 @@ Current, honestly-stated limitations. Fixed issues are not listed.
 
 ## Display / rendering
 
+- **Widescreen: the TALK TO EZLO dialogue box can overlap the rupee counter
+  and the FPS counter** (low severity, v1.4.0). The box is centred in the
+  wide view while the HUD is anchored to the right edge, so at the bottom
+  row they can meet. Cosmetic; a fix is planned for 1.4.1.
+
 - **Title screen after the Deepwood Shrine barrel (low severity).** After
   visiting the Deepwood Shrine rotating barrel, returning to the title screen
   may cause temporary affine/visual artifacts. A clean application restart
@@ -24,15 +29,15 @@ Current, honestly-stated limitations. Fixed issues are not listed.
   marker when no valid overworld position exists for the room — this is by
   design, not a lost marker.
 
-## Features not in v0.1.2
+## Features not in v1.4.0
 
-- **True widescreen** is not available in this version (researched, planned
-  for a later release).
+- **Randomizer** is not in this version (planned for 1.5, from the 3DS
+  port's native randomizer).
 - **Manual "save anywhere"** is not exposed; use the game's normal saving or
   the port's AUTOSAVE / LOAD AUTOSAVE.
-- Offline RetroAchievements (queueing unlocks without a connection) is not
-  supported; RA needs a network connection at play time.
-- There is no in-app updater; updates are manual NRO replacement.
+- **CRT colour filters** (Sonkun-style warm composite) are not offered on the
+  console: they need a CPU pass that cannot hold 60 FPS. Scanlines and the
+  LCD grid are available (GPU overlay).
 
 ## Environment
 

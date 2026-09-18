@@ -14,6 +14,11 @@ aparecen en esta lista.
 
 ## Pantalla / renderizado
 
+- **Pantalla ancha: el cuadro de diálogo de HABLAR CON EZLO puede solaparse
+  con el contador de rupias y el de FPS** (severidad baja, v1.4.0). El cuadro
+  se centra en la vista ancha mientras el HUD se ancla al borde derecho, y en
+  la fila inferior pueden coincidir. Cosmético; corrección prevista para 1.4.1.
+
 - **Pantalla de título tras el barril de Deepwood Shrine (severidad baja).**
   Después de visitar el barril giratorio de Deepwood Shrine, volver a la
   pantalla de título puede provocar artefactos visuales/afines temporales.
@@ -28,16 +33,15 @@ aparecen en esta lista.
   marcador del jugador cuando la sala no tiene una posición válida en el mundo
   exterior. Es intencionado, no un marcador perdido.
 
-## Funciones que no están en la v0.1.2
+## Funciones que no están en la v1.4.0
 
-- El **widescreen real** no está disponible en esta versión (investigado y
-  previsto para una versión posterior).
+- El **randomizer** no está en esta versión (previsto para la 1.5, a partir
+  del randomizer nativo del port de 3DS).
 - El **guardado manual en cualquier lugar** no está expuesto; usa el guardado
-  normal del juego o el AUTOGUARDADO / CARGAR AUTO del port.
-- No hay soporte de RetroAchievements sin conexión; RA necesita conexión de
-  red durante el juego.
-- No hay actualizador integrado; las actualizaciones son sustituyendo el NRO
-  manualmente.
+  normal del juego o AUTOSAVE / LOAD AUTOSAVE del port.
+- Los **filtros CRT de color** (tipo Sonkun) no se ofrecen en la consola:
+  necesitan un paso de CPU que no mantiene 60 FPS. Scanlines y rejilla LCD sí
+  están (capa en GPU).
 
 ## Entorno
 
