@@ -14,7 +14,7 @@
   button shared with TALK TO EZLO), shells cap 9999, no Ezlo hint after
   loading a save, figurine odds floor 20 %, Hero Mode, skip Ezlo tutorials.
   Persisted as `reborn_mask` / `roll_attack_button` in `config.json`.
-- **Screen filters** (SETTINGS → DISPLAY → RENDERING → SCREEN FILTER):
+- **Screen filters** (SETTINGS → DISPLAY → SCREEN FILTER):
   SCANLINES, SCANLINES SOFT, LCD GRID as a single GPU alpha overlay over the
   game rectangle — no CPU cost, all display modes. `screen_filter` in
   `config.json`.

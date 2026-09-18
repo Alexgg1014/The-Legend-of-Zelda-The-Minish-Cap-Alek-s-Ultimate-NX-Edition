@@ -57,7 +57,7 @@ Every entry is a toggle and persists in `config.json` (`reborn_mask`).
 The first four gameplay ones are ported from The Minish Cap Reborn
 (Admentus64, GPL-3.0) by way of Project Picori; see THIRD_PARTY_NOTICES.md.
 
-## Screen filters (SETTINGS → DISPLAY → RENDERING → SCREEN FILTER)
+## Screen filters (SETTINGS → DISPLAY → SCREEN FILTER)
 
 - **SCANLINES**, **SCANLINES SOFT** and **LCD GRID**, drawn as one
   alpha-blended overlay on the GPU over the game rectangle — zero CPU cost,
@@ -69,6 +69,8 @@ The first four gameplay ones are ported from The Minish Cap Reborn
 
 - Long pages are paged (MORE 1-2 row) instead of squeezed; SYSTEM always
   shows every row. Long values no longer get cut off.
+- DISPLAY now links to the RENDERING (upscale, internal scale, target FPS)
+  and FPS HUD (counter position / size) pages, which had no way in before.
 
 ## Notes
 
@@ -78,6 +80,6 @@ The first four gameplay ones are ported from The Minish Cap Reborn
 
 ## Verification
 
-    SHA-256  5ddf2bc78a1a998ae9f1201e989a10feb210320312045aa3275df31f922460d5
+    SHA-256  c93a9846405e625f02e50c65f068a6805ff31f51cb5b871316b9f3ed0db597e1
              tmc_aleks_ultimate_nx_v1.4.0.nro (14218931 bytes)
-    Build ID d7ed6e645dc3d4bd18af0ef1801e8a8d590d0a12
+    Build ID bd2ff573e60e4b7da6c55769d98c4ed2c4d1444b
