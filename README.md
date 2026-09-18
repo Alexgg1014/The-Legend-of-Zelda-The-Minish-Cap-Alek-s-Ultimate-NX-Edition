@@ -39,8 +39,9 @@ below — please see [CREDITS.md](CREDITS.md) for the full lineage.
   stock CPU clock thanks to the tile-based renderer.
 - **Quality of life** (SETTINGS → GAMEPLAY → QUALITY OF LIFE, all toggles):
   360° stick movement, spin attack by rolling the stick and pressing B, a
-  one-button roll attack, shells cap 9999, no Ezlo hint after loading a save,
-  fairer figurine odds, optional Hero Mode and Ezlo-tutorial skip.
+  one-button roll attack, Pegasus dash that turns with the stick (1.4.1),
+  shells cap 9999, no Ezlo hint after loading a save, fairer figurine odds,
+  optional Hero Mode and Ezlo-tutorial skip.
 - **Screen filters** — scanlines (hard / soft) and a GBA LCD grid, drawn on
   the GPU at no FPS cost (SETTINGS → DISPLAY).
 - **Three display modes**

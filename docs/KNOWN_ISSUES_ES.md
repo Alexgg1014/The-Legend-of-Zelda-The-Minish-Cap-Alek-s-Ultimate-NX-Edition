@@ -14,11 +14,6 @@ aparecen en esta lista.
 
 ## Pantalla / renderizado
 
-- **Pantalla ancha: el cuadro de diálogo de HABLAR CON EZLO puede solaparse
-  con el contador de rupias y el de FPS** (severidad baja, v1.4.0). El cuadro
-  se centra en la vista ancha mientras el HUD se ancla al borde derecho, y en
-  la fila inferior pueden coincidir. Cosmético; corrección prevista para 1.4.1.
-
 - **Pantalla de título tras el barril de Deepwood Shrine (severidad baja).**
   Después de visitar el barril giratorio de Deepwood Shrine, volver a la
   pantalla de título puede provocar artefactos visuales/afines temporales.
@@ -33,7 +28,7 @@ aparecen en esta lista.
   marcador del jugador cuando la sala no tiene una posición válida en el mundo
   exterior. Es intencionado, no un marcador perdido.
 
-## Funciones que no están en la v1.4.0
+## Funciones que no están en la v1.4.1
 
 - El **randomizer** no está en esta versión (previsto para la 1.5, a partir
   del randomizer nativo del port de 3DS).

@@ -41,9 +41,10 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
   renderizador por tiles.
 - **Calidad de vida** (AJUSTES → GAMEPLAY → CALIDAD DE VIDA, todo con
   interruptor): movimiento de 360° con el stick, ataque giratorio dibujando un
-  círculo con el stick y pulsando B, ataque de voltereta con un botón, tope de
-  conchas 9999, sin pista de Ezlo al cargar partida, figuras con mejores
-  probabilidades, y opcionales Modo Héroe y saltar tutoriales de Ezlo.
+  círculo con el stick y pulsando B, ataque de voltereta con un botón, carrera
+  de botas Pegaso que gira con el stick (1.4.1), tope de conchas 9999, sin
+  pista de Ezlo al cargar partida, figuras con mejores probabilidades, y
+  opcionales Modo Héroe y saltar tutoriales de Ezlo.
 - **Filtros de pantalla** — scanlines (fuertes / suaves) y rejilla LCD de GBA,
   dibujados en la GPU sin coste de FPS (AJUSTES → DISPLAY).
 - **Tres modos de pantalla**

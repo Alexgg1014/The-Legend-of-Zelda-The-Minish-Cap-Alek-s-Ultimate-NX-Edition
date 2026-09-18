@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "1.4.0",
+  "version": "1.4.1",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.0/tmc_aleks_ultimate_nx_v1.4.0.nro",
-  "nro_sha256": "c93a9846405e625f02e50c65f068a6805ff31f51cb5b871316b9f3ed0db597e1",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.1/tmc_aleks_ultimate_nx_v1.4.1.nro",
+  "nro_sha256": "635be6ffb1e34c869ea399d03596e0716276f576cb5c8d11ff7d57b4b25cac58",
   "nro_size": 14218931,
   "min_updater_schema": 1,
   "changelog": [
-    "Widescreen 16:9 in Normal mode, 60 FPS at stock clock",
-    "Stairs/doorway occlusion fixed, BG3 overlays full width",
-    "QoL: 360 stick, spin by circle, roll attack; GPU scanline/LCD filters"
+    "Fix crash talking to the cat girl after the library quest",
+    "Fix getting stuck in doors with 360 stick; Ezlo box vs rupee counter",
+    "QoL: Pegasus dash turns with the stick (toggle)"
   ]
 }

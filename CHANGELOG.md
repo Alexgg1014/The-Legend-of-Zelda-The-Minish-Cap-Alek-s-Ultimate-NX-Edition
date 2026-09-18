@@ -1,5 +1,33 @@
 # Changelog
 
+## v1.4.1 — Hotfix: townsperson crash, doors with 360° stick, Ezlo box, Pegasus steering
+
+### Fixed
+
+- **Crash talking to the girl with the cat (Hyrule Town, after the library
+  quest)** — reported on GBAtemp, present since 1.3. Her dialogue calls a
+  function by GBA ROM address (`sub_0806200C`); the port resolved every other
+  townsperson dialogue but not this one and jumped to the raw address.
+  `CALL_FUNC` dialogues now go through the port's function table, both in
+  the townsperson NPC and in the script interpreter, and an unresolved one
+  is logged instead of dereferenced.
+- **Link getting stuck walking into doors with 360° stick movement.** Door
+  and room-transition triggers are 6-pixel rectangles meant to be walked
+  into straight; the stick landing 11° off an axis made Link slide along the
+  frame. The two steps on either side of each axis now snap to it (22.5°
+  cone); the other 24 directions are untouched.
+- **Widescreen: TALK TO EZLO box overlapping the rupee / FPS counter.** HUD
+  columns to the right of the text box stay anchored to the screen edge.
+
+### Added
+
+- **PEGASUS TURN WHILE DASHING** (SETTINGS → GAMEPLAY → QUALITY OF LIFE, on by
+  default). The stock game only leans a dash 11° and stops it when you press
+  the opposite direction; with this on, the dash turns toward the stick
+  11° per frame (a corner is an 8-frame arc, a U-turn 16), Link's facing
+  and the dash-sword hitbox follow, and only releasing the item or hitting a
+  wall ends it. Off = original behaviour.
+
 ## v1.4.0 — Widescreen, tile renderer, quality of life
 
 ### Added

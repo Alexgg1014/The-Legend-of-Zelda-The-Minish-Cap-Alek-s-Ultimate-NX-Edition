@@ -11,11 +11,6 @@ Current, honestly-stated limitations. Fixed issues are not listed.
 
 ## Display / rendering
 
-- **Widescreen: the TALK TO EZLO dialogue box can overlap the rupee counter
-  and the FPS counter** (low severity, v1.4.0). The box is centred in the
-  wide view while the HUD is anchored to the right edge, so at the bottom
-  row they can meet. Cosmetic; a fix is planned for 1.4.1.
-
 - **Title screen after the Deepwood Shrine barrel (low severity).** After
   visiting the Deepwood Shrine rotating barrel, returning to the title screen
   may cause temporary affine/visual artifacts. A clean application restart
@@ -29,7 +24,7 @@ Current, honestly-stated limitations. Fixed issues are not listed.
   marker when no valid overworld position exists for the room — this is by
   design, not a lost marker.
 
-## Features not in v1.4.0
+## Features not in v1.4.1
 
 - **Randomizer** is not in this version (planned for 1.5, from the 3DS
   port's native randomizer).
