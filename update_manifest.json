@@ -3,12 +3,12 @@
   "version": "1.4.0",
   "channel": "stable",
   "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.0/tmc_aleks_ultimate_nx_v1.4.0.nro",
-  "nro_sha256": "b29a49176bbcbfd5d117a9f241cf12c327721b6ace7521515376f57ad587f3ba",
-  "nro_size": 14214835,
+  "nro_sha256": "5ddf2bc78a1a998ae9f1201e989a10feb210320312045aa3275df31f922460d5",
+  "nro_size": 14218931,
   "min_updater_schema": 1,
   "changelog": [
     "Widescreen 16:9 in Normal mode, 60 FPS at stock clock",
     "Stairs/doorway occlusion fixed, BG3 overlays full width",
-    "QoL: 360 stick, spin by stick circle, roll attack button"
+    "QoL: 360 stick, spin by circle, roll attack; GPU scanline/LCD filters"
   ]
 }

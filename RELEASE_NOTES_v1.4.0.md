@@ -57,6 +57,14 @@ Every entry is a toggle and persists in `config.json` (`reborn_mask`).
 The first four gameplay ones are ported from The Minish Cap Reborn
 (Admentus64, GPL-3.0) by way of Project Picori; see THIRD_PARTY_NOTICES.md.
 
+## Screen filters (SETTINGS → DISPLAY → RENDERING → SCREEN FILTER)
+
+- **SCANLINES**, **SCANLINES SOFT** and **LCD GRID**, drawn as one
+  alpha-blended overlay on the GPU over the game rectangle — zero CPU cost,
+  no FPS impact, in every display mode. The pattern follows GBA pixel
+  boundaries at any scale. (The CPU CRT approximations remain debug-only:
+  they cannot hold 60 FPS on the console.)
+
 ## Settings menu
 
 - Long pages are paged (MORE 1-2 row) instead of squeezed; SYSTEM always
@@ -70,6 +78,6 @@ The first four gameplay ones are ported from The Minish Cap Reborn
 
 ## Verification
 
-    SHA-256  b29a49176bbcbfd5d117a9f241cf12c327721b6ace7521515376f57ad587f3ba
-             tmc_aleks_ultimate_nx_v1.4.0.nro (14214835 bytes)
-    Build ID 85273ffbced1ccf136620bbb8e217cc33f3dd8f0
+    SHA-256  5ddf2bc78a1a998ae9f1201e989a10feb210320312045aa3275df31f922460d5
+             tmc_aleks_ultimate_nx_v1.4.0.nro (14218931 bytes)
+    Build ID d7ed6e645dc3d4bd18af0ef1801e8a8d590d0a12

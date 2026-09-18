@@ -44,6 +44,8 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
   círculo con el stick y pulsando B, ataque de voltereta con un botón, tope de
   conchas 9999, sin pista de Ezlo al cargar partida, figuras con mejores
   probabilidades, y opcionales Modo Héroe y saltar tutoriales de Ezlo.
+- **Filtros de pantalla** — scanlines (fuertes / suaves) y rejilla LCD de GBA,
+  dibujados en la GPU sin coste de FPS (AJUSTES → DISPLAY → RENDERING).
 - **Tres modos de pantalla**
   - **NORMAL** — presentación clásica a una sola pantalla (Fit o 2×/3×/4× exacto).
   - **DUAL** — el juego más un panel de segunda pantalla, lado a lado.
