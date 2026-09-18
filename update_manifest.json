@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "1.4.1",
+  "version": "1.4.2",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.1/tmc_aleks_ultimate_nx_v1.4.1.nro",
-  "nro_sha256": "635be6ffb1e34c869ea399d03596e0716276f576cb5c8d11ff7d57b4b25cac58",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.2/tmc_aleks_ultimate_nx_v1.4.2.nro",
+  "nro_sha256": "500f635c53ba66b3055a99635f01e8822c18d76a5f1082753d774cd2b59db208",
   "nro_size": 14218931,
   "min_updater_schema": 1,
   "changelog": [
-    "Fix crash talking to the cat girl after the library quest",
-    "Fix getting stuck in doors with 360 stick; Ezlo box vs rupee counter",
-    "QoL: Pegasus dash turns with the stick (toggle)"
+    "Fix crash entering Lake Hylia (and other rooms) on older SD asset trees",
+    "In-app updater now updates the NRO you launched, whatever its name",
+    "Includes all 1.4.1 fixes"
   ]
 }

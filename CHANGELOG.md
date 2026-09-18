@@ -1,5 +1,25 @@
 # Changelog
 
+## v1.4.2 — Hotfix: stale-asset room crash, in-app updater
+
+### Fixed
+
+- **Crash entering Lake Hylia from Lon Lon Ranch** (GBAtemp report, crash
+  logs supplied). The room's entity list in the SD `assets/` tree — extracted
+  by an early version and never refreshed — has no end marker, so the engine
+  read past it and spawned garbage player items (`DataAbort` in `ItemInit`).
+  Every room's entity / tile-entity list is now checked for its terminator
+  when the area loads; a truncated one is replaced by the ROM structure and
+  logged once in `assetfix.log`. This replaces the fixed whitelist of five
+  known offsets and covers the 127 lists the current extractor also leaves
+  unterminated.
+- **In-app updater: "Current game NRO missing or invalid".** The installer
+  looked for the game at a fixed name (`tmc_aleks_ultimate_nx.nro`) while
+  releases ship as `tmc_aleks_ultimate_nx_v<ver>.nro`. It now replaces the
+  NRO that was launched (hbmenu's `argv[0]`), with the backup next to it as
+  `.bak`. Note: the 1.4.1 → 1.4.2 step still runs the old installer, so
+  install 1.4.2 by hand once; from then on the in-app update works.
+
 ## v1.4.1 — Hotfix: townsperson crash, doors with 360° stick, Ezlo box, Pegasus steering
 
 ### Fixed
