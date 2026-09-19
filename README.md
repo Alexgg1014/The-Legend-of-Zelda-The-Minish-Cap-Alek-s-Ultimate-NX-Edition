@@ -161,7 +161,9 @@ your own ROM provides.
 
 Short version — full guide in [docs/INSTALLATION.md](docs/INSTALLATION.md):
 
-1. Copy the NRO to `/switch/tmc/` on your SD card.
+1. Copy the NRO to `/switch/tmc/` on your SD card, keeping its name
+   (`tmc_aleks_ultimate_nx.nro`) — that is the file the in-app updater
+   replaces.
 2. Copy your **own, legally obtained** *The Minish Cap* **USA** ROM (`.gba`)
    into the same folder. The filename does not matter — the port identifies
    the ROM by its header. `baserom.gba` is the conventional name.

@@ -3,6 +3,10 @@
 The ending works now. Saves and settings carry over; the in-app updater
 installs it as usual.
 
+From this release the download is named `tmc_aleks_ultimate_nx.nro` — copy it
+to `/switch/tmc/` as is. That is the name the in-app updater has always
+expected, so a fresh install updates itself from now on without renaming.
+
 ## Fixed
 
 - **Credits never rolled after beating Vaati.** The outro's "Roll Credits"
