@@ -1,5 +1,25 @@
 # Changelog
 
+## v1.4.3 — Hotfix: Lake Hylia (for real), cat swipe crash
+
+### Fixed
+
+- **Crash entering Lake Hylia** (GBAtemp, two reporters, all versions). 1.4.2
+  guessed a stale asset tree; the real cause is in the code: the room init
+  points the enemy respawn list at `Enemies_LakeHylia_Main`, which the port
+  defined as a single zero `u32` instead of the 21-entry list at ROM
+  `0x080F3D44`. The walk read `kind 0` and continued through `.bss`/heap,
+  spawning garbage player items until `ItemInit` / `OpenSmallChest` faulted.
+  It fires for every player who has not cleared the Temple of Droplets. The
+  init now uses the ROM bytes, and the entity-list walks stop at the first
+  entry whose kind is not a real entity kind (second line of defence behind
+  the 1.4.2 terminator check).
+- **Crash when a Hyrule Town cat swipes Minish Link.** The cat's hitbox table
+  is packed 32-bit ROM pointers, read as 64-bit `Hitbox*` — two entries
+  concatenated into one bad pointer (`0x0811111C0811111A`). Same class as the
+  other packed-pointer tables already handled in the port; it was the last
+  unguarded one.
+
 ## v1.4.2 — Hotfix: stale-asset room crash, in-app updater
 
 ### Fixed

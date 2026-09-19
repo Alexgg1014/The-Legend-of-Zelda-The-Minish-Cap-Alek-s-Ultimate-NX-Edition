@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "1.4.2",
+  "version": "1.4.3",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.2/tmc_aleks_ultimate_nx_v1.4.2.nro",
-  "nro_sha256": "500f635c53ba66b3055a99635f01e8822c18d76a5f1082753d774cd2b59db208",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.3/tmc_aleks_ultimate_nx_v1.4.3.nro",
+  "nro_sha256": "bae6da74352c9a0f822cbd0da18b02e4b1086dbf149c9e7132d8753b8a461ce2",
   "nro_size": 14218931,
   "min_updater_schema": 1,
   "changelog": [
-    "Fix crash entering Lake Hylia (and other rooms) on older SD asset trees",
-    "In-app updater now updates the NRO you launched, whatever its name",
-    "Includes all 1.4.1 fixes"
+    "Fix Lake Hylia crash for real (enemy list stub was empty, not the assets)",
+    "Fix crash when a Hyrule Town cat swipes Minish Link",
+    "Includes 1.4.1/1.4.2 fixes (updater, cat-girl dialogue, doors, Pegasus steering)"
   ]
 }

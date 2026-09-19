@@ -28,7 +28,7 @@ aparecen en esta lista.
   marcador del jugador cuando la sala no tiene una posición válida en el mundo
   exterior. Es intencionado, no un marcador perdido.
 
-## Funciones que no están en la v1.4.2
+## Funciones que no están en la v1.4.3
 
 - El **randomizer** no está en esta versión (previsto para la 1.5, a partir
   del randomizer nativo del port de 3DS).
