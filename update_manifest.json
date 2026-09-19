@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "1.4.4",
+  "version": "1.4.5",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.4/tmc_aleks_ultimate_nx_v1.4.4.nro",
-  "nro_sha256": "51cf6fec890f8520e241b02a14cc9558f8fc4b0e308d1a5252a7c478ae0d6029",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.5/tmc_aleks_ultimate_nx_v1.4.5.nro",
+  "nro_sha256": "1bb937a2e419abbcf7b80bf5e591a2c41c5cdcb282796c072665351f51453f07",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "ITEMS tab: drag any item onto A / B / X / Y / ZL / ZR; drag rings to swap or clear",
-    "Shortcut slots shown in the panel as ZL / ZR",
-    "Includes the 1.4.3 crash fixes"
+    "Ending: the credits now roll after Vaati (the outro skipped them)",
+    "Soft reset restarts to the title instead of closing the app (credits end, game over, Start+Select+A+B)",
+    "Includes 1.4.4 drag-and-drop equipment"
   ]
 }

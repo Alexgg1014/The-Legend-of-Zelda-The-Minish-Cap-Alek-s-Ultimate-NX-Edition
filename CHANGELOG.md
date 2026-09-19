@@ -1,5 +1,27 @@
 # Changelog
 
+## v1.4.5 — The ending works
+
+### Fixed
+
+- **Credits never rolled after beating Vaati.** The outro script's "Roll
+  Credits" call (`sub_0807FB94`, USA `0x0807FB95`) was missing from the port's
+  script-function table, so the call was skipped and the outro just handed
+  control back to the player. Found by diffing the table against
+  zelda-tmc-3ds v2.0 (their fix dc3f5041, June 2026 — after our fork point).
+- **Soft reset closed the app.** `SoftReset` was an `exit(0)` stub, so the end
+  of the credits, "game over → no continue" and the Start+Select+A+B combo all
+  quit to the home menu. It now restarts to the title the way the GBA BIOS
+  does (longjmp back into `AgbMain`'s init; EWRAM/save data preserved).
+
+### Notes from the zelda-tmc-3ds v2.0 review
+
+Everything else in that release that touches the engine is either EU/JP
+regional work (bomb/bottle/Goron/Cloud Tops save repairs, EU sprite maps) or
+already in this tree (palette slot 15 alias, enemy death-FX NULL checks,
+NPC gfx-load retry, GFX slot compaction guards, affine table alias across
+subtasks). The Old 3DS PICA200 renderer and audio work do not apply.
+
 ## v1.4.4 — Drag-and-drop equipment on the second screen
 
 ### Added
