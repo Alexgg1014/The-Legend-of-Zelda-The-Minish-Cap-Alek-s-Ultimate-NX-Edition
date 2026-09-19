@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.4.4 — Drag-and-drop equipment on the second screen
+
+### Added
+
+- **ITEMS tab: six rings and drag-and-drop.** A and B as before, plus the four
+  shortcut slots (X / Y / ZL / ZR) as a 2×2 block of smaller rings, each
+  showing its item with a button badge. Drag an item from the grid onto any
+  ring to assign it; drag a ring onto another ring to swap the two (A/B
+  swaps go through the game's own equip path); drag a shortcut ring off every
+  ring — or hold it — to empty that shortcut. Tap = A, hold = B and arming a
+  ring still work; the D-pad reaches the new rings too. On panels too short
+  for six rings the shortcut block hides and A/B stay as before.
+
+### Changed
+
+- Shortcut slots are labelled ZL / ZR (Switch names) instead of L2 / R2; the
+  `config.json` keys `soft_l2` / `soft_r2` are unchanged.
+
 ## v1.4.3 — Hotfix: Lake Hylia (for real), cat swipe crash
 
 ### Fixed

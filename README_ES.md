@@ -59,8 +59,11 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
   - **MAPA** — mapas del mundo y de mazmorras con el marcador de Link en vivo,
     marcas de windcrests, vuelta automática de piso y cámara de seguimiento
     opcional.
-  - **OBJETOS** — vista de equipo con los anillos A/B y los atajos X/Y/ZL/ZR
-    (soft slots: un tercer y cuarto objeto sin abrir el menú de pausa).
+  - **OBJETOS** — vista de equipo con los anillos A/B y los anillos de atajo
+    X/Y/ZL/ZR (soft slots: un tercer y cuarto objeto sin abrir el menú de
+    pausa). Arrastra un objeto a cualquier anillo para asignarlo, arrastra un
+    anillo sobre otro para intercambiarlos, y arrastra un atajo fuera (o
+    mantenlo pulsado) para vaciarlo (1.4.4).
   - **AJUSTES** — todos los ajustes del port, el actualizador y la info del build.
 - **Funciona con táctil o con mando.** En modo NORMAL el panel se abre como
   superposición con **Menos** y se queda en cualquier pestaña: la cruceta

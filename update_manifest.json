@@ -1,14 +1,14 @@
 {
   "schema": 1,
-  "version": "1.4.3",
+  "version": "1.4.4",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.3/tmc_aleks_ultimate_nx_v1.4.3.nro",
-  "nro_sha256": "bae6da74352c9a0f822cbd0da18b02e4b1086dbf149c9e7132d8753b8a461ce2",
-  "nro_size": 14218931,
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.4/tmc_aleks_ultimate_nx_v1.4.4.nro",
+  "nro_sha256": "51cf6fec890f8520e241b02a14cc9558f8fc4b0e308d1a5252a7c478ae0d6029",
+  "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Fix Lake Hylia crash for real (enemy list stub was empty, not the assets)",
-    "Fix crash when a Hyrule Town cat swipes Minish Link",
-    "Includes 1.4.1/1.4.2 fixes (updater, cat-girl dialogue, doors, Pegasus steering)"
+    "ITEMS tab: drag any item onto A / B / X / Y / ZL / ZR; drag rings to swap or clear",
+    "Shortcut slots shown in the panel as ZL / ZR",
+    "Includes the 1.4.3 crash fixes"
   ]
 }

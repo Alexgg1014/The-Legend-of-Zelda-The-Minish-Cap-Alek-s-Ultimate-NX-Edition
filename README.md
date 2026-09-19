@@ -54,8 +54,10 @@ below — please see [CREDITS.md](CREDITS.md) for the full lineage.
   - **QUEST** — current main quest, objective, hint and location (Story Guide).
   - **MAP** — overworld and dungeon maps with Link's live position marker,
     windcrest pins, floor auto-return and optional follow camera.
-  - **ITEMS** — equipment view with A/B rings and X/Y/ZL/ZR shortcut slots
-    (soft slots: equip a third and fourth item without opening the pause menu).
+  - **ITEMS** — equipment view with A/B rings and X/Y/ZL/ZR shortcut rings
+    (soft slots: equip a third and fourth item without opening the pause
+    menu). Drag an item onto any ring to assign it, drag ring to ring to
+    swap, drag a shortcut ring away (or hold it) to empty it (1.4.4).
   - **SETTINGS** — every port setting, plus the updater and build info.
 - **Works with touch or controller.** In NORMAL mode the panel opens as an
   overlay with **Minus** and stays up on any tab: D-pad moves, **A / B**
