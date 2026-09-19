@@ -2,10 +2,11 @@
 
 Hotfix for the two reports on 1.4.1. Saves and settings carry over.
 
-**Install this one by hand** (copy the NRO to `/switch/tmc/`): the in-app
-updater in 1.4.1 cannot install anything unless the file is named
-`tmc_aleks_ultimate_nx.nro` — that is one of the two bugs fixed here, so from
-1.4.2 on the updater works with the file as downloaded.
+The in-app updater installs it as usual when your game is at
+`/switch/tmc/tmc_aleks_ultimate_nx.nro` (the documented install path). If you
+kept the downloaded file name (`..._v1.4.x.nro`) the 1.4.1 updater could not
+find it — that is one of the two bugs fixed here; copy this NRO over yours once
+and from now on the updater works with any name.
 
 ## Fixed
 

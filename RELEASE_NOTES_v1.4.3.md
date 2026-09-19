@@ -1,7 +1,9 @@
 # Alek's Ultimate NX Edition v1.4.3
 
-Hotfix. Saves and settings carry over. Install by hand if you are on 1.4.1 or
-older (the in-app updater works from 1.4.2 on).
+Hotfix. Saves and settings carry over. The in-app updater (SETTINGS → SYSTEM)
+installs it as usual when your game is at `/switch/tmc/tmc_aleks_ultimate_nx.nro`;
+if you kept the downloaded file name (`..._v1.4.x.nro`), copy this NRO over it
+once — from 1.4.2 on the updater handles that name too.
 
 ## Fixed
 

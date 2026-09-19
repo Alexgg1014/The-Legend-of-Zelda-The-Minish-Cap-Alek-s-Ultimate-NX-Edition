@@ -37,8 +37,7 @@
   looked for the game at a fixed name (`tmc_aleks_ultimate_nx.nro`) while
   releases ship as `tmc_aleks_ultimate_nx_v<ver>.nro`. It now replaces the
   NRO that was launched (hbmenu's `argv[0]`), with the backup next to it as
-  `.bak`. Note: the 1.4.1 → 1.4.2 step still runs the old installer, so
-  install 1.4.2 by hand once; from then on the in-app update works.
+  `.bak`. Games installed under the documented name were never affected.
 
 ## v1.4.1 — Hotfix: townsperson crash, doors with 360° stick, Ezlo box, Pegasus steering
 
