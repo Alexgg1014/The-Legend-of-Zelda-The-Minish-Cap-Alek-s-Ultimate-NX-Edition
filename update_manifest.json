@@ -1,14 +1,13 @@
 {
   "schema": 1,
-  "version": "1.4.6",
+  "version": "1.4.7",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.6/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "97be2c40754dd3a76ff5791ae9986f3ad0cc616f463c5a6394627fec64c32d64",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.7/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "216f14aab5c068a21f8e6a1ee6a8755718a2a1ecd48eb0dd469eabab44175208",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Temple of Droplets: the sunbeam renders again (light puzzles work)",
-    "Dark Hyrule Castle: statue-room reward flag fixed",
-    "Beetle mandibles crash fixed"
+    "Temple of Droplets: crash when opening the boss door fixed (Big Octorok room)",
+    "Big Octorok fight: same-class crash guards"
   ]
 }

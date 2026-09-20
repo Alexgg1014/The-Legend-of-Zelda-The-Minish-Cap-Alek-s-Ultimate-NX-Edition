@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.4.7 — Temple of Droplets boss door crash
+
+### Fixed
+
+- **Crash when opening the Temple of Droplets boss door** (GBAtemp report).
+  `FrozenOctorok` legs (types 1-4) run `Action1` straight from their `Init`,
+  before the mouth part (type 5) has stored itself in `heap->mouthObject`, so
+  the first frame read `NULL->base.health`. The GBA reads BIOS garbage there
+  and carries on; the port faulted as soon as the Element room loaded. The
+  read is now NULL-guarded, as are the same-family reads in `octorokBoss.c`
+  (camera target on `tailObjects[0]`, death explosion on `legObjects[0]`,
+  mouth health at death, TAIL / TAIL_END deletes) — zelda-tmc-3ds #91/#97.
+  Layout asserts added for `FrozenOctorokEntity` (`heap` at the shared
+  `OctorokBossEntity` offset).
+
 ## v1.4.6 — Temple of Droplets sunbeam, statue reward, beetle crash
 
 ### Fixed
