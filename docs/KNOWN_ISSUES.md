@@ -24,7 +24,7 @@ Current, honestly-stated limitations. Fixed issues are not listed.
   marker when no valid overworld position exists for the room — this is by
   design, not a lost marker.
 
-## Features not in v1.4.5
+## Features not in v1.4.6
 
 - **Randomizer** is not in this version (planned for 1.5, from the 3DS
   port's native randomizer).

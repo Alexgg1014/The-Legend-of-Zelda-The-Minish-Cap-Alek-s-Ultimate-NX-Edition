@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.4.6 — Temple of Droplets sunbeam, statue reward, beetle crash
+
+### Fixed
+
+- **Temple of Droplets: the sunbeam never rendered** (GBAtemp report). Room
+  managers receive their 16-byte `EntityData` by a fixed-offset copy that
+  assumes no pointer members before the data; `TempleOfDropletsManager` has
+  one, so its BG3 offsets read the X position and its `flag`/`localFlag`
+  stayed 0 — no light column in any temple room, and the light-gated ice
+  puzzles ran on a zero flag. The fields are now assigned explicitly
+  (zelda-tmc-3ds #75).
+- **Dark Hyrule Castle: destroying the four statues never set the reward
+  flag** — same copy-offset defect in `AngryStatueManager` (#77).
+- **Crash when a Beetle dies in the same frame as its mandibles**
+  (`mandiblesProjectile` dereferenced a cleared link; from
+  tmc-switch-community).
+
 ## v1.4.5 — The ending works
 
 ### Fixed
