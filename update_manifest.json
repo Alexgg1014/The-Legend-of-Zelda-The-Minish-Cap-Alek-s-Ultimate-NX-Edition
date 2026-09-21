@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "version": "1.4.7",
+  "version": "1.4.8",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.7/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "216f14aab5c068a21f8e6a1ee6a8755718a2a1ecd48eb0dd469eabab44175208",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.8/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "06ba02984a20852b13af02e35b3d6929cf3493744c8db940bda9d0e1b2294ba7",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Temple of Droplets: crash when opening the boss door fixed (Big Octorok room)",
-    "Big Octorok fight: same-class crash guards"
+    "Temple of Droplets: the room below the lily pad waterfall loaded no entities (pad, chest, bollards) - Link landed in deep water",
+    "Includes 1.4.7 boss door crash fix"
   ]
 }

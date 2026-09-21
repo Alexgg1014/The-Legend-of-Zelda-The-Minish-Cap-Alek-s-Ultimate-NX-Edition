@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.4.8 — Temple of Droplets waterfall lily pad
+
+### Fixed
+
+- **The room below the Temple of Droplets lily pad waterfall loaded no
+  entities** (GBAtemp report). `Entities_TempleOfDroplets_LilypadWestB2_0`
+  opens with `entity_raw type=0x5`, an unused kind the GBA spawns and deletes
+  on its next update. The 1.4.3 terminator guard (`Port_RoomEntityKindValid`)
+  rejected it and stopped the list at entry 0, so the B2 pad (type 1, local
+  flag 0x73), the chest and the bollards never existed and Link landed in deep
+  water after the pit. Kind 5 is now accepted; the port's update table deletes
+  it exactly as the GBA does. Only list in the game with such an entry.
+
 ## v1.4.7 — Temple of Droplets boss door crash
 
 ### Fixed
