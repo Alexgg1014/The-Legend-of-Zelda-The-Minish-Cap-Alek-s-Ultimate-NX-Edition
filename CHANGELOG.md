@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.4.10 — Grimblade dojo braziers can be lit
+
+### Fixed
+
+- **The Grimblade dojo braziers did not react to the Flame Lantern** (issue
+  #10 follow-up). They are `TILE_TYPE_117` on `LAYER_TOP` while Link walks on
+  `LAYER_BOTTOM`, and both halves of the lantern path look the tile up on the
+  player's own layer: `itemLantern`'s gate
+  (`sub_080B1BA4(..., collisionLayer, 0x40)`) never opened, so the burn
+  animation never started, and `sub_0807AB44` would have found nothing to
+  ignite either. Measured at the brazier tile (0x082): `gate(L1)=0`,
+  `gate(L2)=0x40`, tile type on L2 = `0x75`. Both now retry on the other layer
+  and the spawned `FLAME` carries that layer, so `SetTileType` changes the tile
+  the `LightLevelSetManager` watches. The `sub_0807AB44` half mirrors
+  zelda-tmc-3ds #139; the gate is ours.
+
 ## v1.4.9 — Palace of Winds boss room, Veil Falls Biggoron, dojo braziers
 
 ### Fixed
