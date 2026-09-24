@@ -1,5 +1,35 @@
 # Changelog
 
+## v1.4.9 — Palace of Winds boss room, Veil Falls Biggoron, dojo braziers
+
+### Fixed
+
+- **Palace of Winds boss room crashed on entry** (issue #11). The
+  `GyorgBossObject` dispatcher runs `sub_080A1DCC` every frame, including the
+  one where `SetupStart` has filled `heap->female/male1/male2` but not
+  `mouth`/`tail` (`GyorgFemale_Setup` fills those on the female's first
+  update), so `mouth->base.flags |= 0x80` wrote through NULL — the GBA write
+  lands in the read-only BIOS mirror, the port faults. Guarded, with the tail
+  child chain and the phase transitions that deref a male after it clears its
+  own heap slot. `gyorgMale` also cleared that slot by raw word index
+  (`((u32*)myHeap)[2]/[3]` aliased `male1`/`male2` on GBA but land inside
+  `heap->female` with 8-byte pointers). From zelda-tmc-3ds #136/#140.
+- **Veil Falls Top crashed on the way to the tornado / walking west past
+  Biggoron** (issue #11, GBAtemp report). `bigGoron.c` addressed
+  `gMapDataTopSpecial` as `&gUnk_02006F00[-0x4000]` and `gUnk_02006F00` as
+  `gMapDataTopSpecial + 0x4000` — EWRAM adjacency that does not hold where the
+  two are separate allocations: the first is unmapped, the second filled the
+  wrong buffer and left Biggoron's BG1 slice blank. Both routed through the
+  real buffers and the slice offset clamped, so a negative `xOffset` (huge as
+  u32) can no longer leave the 16 KB buffer. From zelda-tmc-3ds #102.
+- **Grimblade dojo braziers were invisible but kept their collision**
+  (issue #10). `mode1.c` ordered the BGs with an exchange sort that could
+  reorder equal-priority layers through unrelated swaps; the GBA tie-breaks by
+  ascending BG index. Now an insertion sort, captured as
+  `port/patches/viruappu-stable-bg-order.patch` and applied by both the PC and
+  the Switch build. Verified against 11 scripted scenes: only the dojo and
+  Biggoron frames change.
+
 ## v1.4.8 — Temple of Droplets waterfall lily pad
 
 ### Fixed
