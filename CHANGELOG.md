@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.4.11 — hotfix: brazier crash from 1.4.10
+
+### Fixed
+
+- **Lighting a brazier could crash** (1.4.10 regression, issue #10). The
+  cross-layer lantern fallback from 1.4.10 applied to any burnable tile, so the
+  lantern could ignite a tile on the layer the player is not on and the
+  spreading `FLAME` then carried a tile entry the room does not have:
+  `Flame_Action1` read `((u16*)super->child)[3]` through NULL (far=0x6). The
+  fallback now only crosses layers when the tile there is `TILE_TYPE_117` (an
+  unlit torch), which is the Grimblade dojo case; every other burnable behaves
+  as in 1.4.9. `Flame_Action1` also NULL-guards the child read.
+
 ## v1.4.10 — Grimblade dojo braziers can be lit
 
 ### Fixed

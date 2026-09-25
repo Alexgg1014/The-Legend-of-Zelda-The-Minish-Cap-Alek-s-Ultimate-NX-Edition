@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "version": "1.4.10",
+  "version": "1.4.11",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.10/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "51ba1e935fe6b4c6813ec198b682564b2ccdce4abe4e1442b1580886cd83cce2",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.11/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "c2a1d03d46a191a66a081c286e54c634a47e1fa59e44594a8a638153967611dc",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Grimblade's dojo: the braziers can be lit with the Flame Lantern again",
-    "Includes the 1.4.9 Palace of Winds and Veil Falls crash fixes"
+    "Fixes a 1.4.10 crash when lighting a brazier in some rooms",
+    "Grimblade's dojo braziers still light as they should"
   ]
 }
