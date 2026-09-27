@@ -1,13 +1,12 @@
 {
   "schema": 1,
-  "version": "1.4.11",
+  "version": "1.4.12",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.11/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "c2a1d03d46a191a66a081c286e54c634a47e1fa59e44594a8a638153967611dc",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.12/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "5b6094714cb43ba08e03425c49fbedee0b854ce84f06b2591dd757417d06eba7",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Fixes a 1.4.10 crash when lighting a brazier in some rooms",
-    "Grimblade's dojo braziers still light as they should"
+    "Palace of Winds: the Gyorg Pair fight no longer crashes in its final phase"
   ]
 }

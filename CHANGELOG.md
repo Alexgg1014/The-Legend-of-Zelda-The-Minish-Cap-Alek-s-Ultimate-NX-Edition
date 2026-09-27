@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.4.12 — Gyorg Pair final-phase crash
+
+### Fixed
+
+- **The Gyorg Pair fight crashed in its final phase when hitting the exposed
+  eyes** (issue #12, Data Abort at far=0x4D). Both males clear their own
+  `GyorgHeap` slot the frame they finish dying (`sub_08047D24`), so in the last
+  phase `male1` and `male2` are both NULL and the eye's male lookup
+  (`gyorgFemaleEye.c`) read `tmp->base.health` through NULL — 0x4d is the
+  health offset in the port's enemy view, matching the reported fault address.
+  A gone male means defeated, so it returns 1 like the dead-male path below
+  (same convention as `sub_080A20B8`). `GyorgFemaleEye` and `GyorgMaleEye` also
+  get the missing-parent guard their siblings already had. From zelda-tmc-3ds
+  #136/#140.
+
 ## v1.4.11 — hotfix: brazier crash from 1.4.10
 
 ### Fixed
