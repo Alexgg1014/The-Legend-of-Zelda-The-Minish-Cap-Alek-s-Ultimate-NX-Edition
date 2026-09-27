@@ -1,5 +1,26 @@
 # Changelog
 
+## v1.4.13 — Vaati hardening pass
+
+### Changed
+
+- **Ported the donor port's `PC_PORT` guards for the three Vaati arenas**
+  (`vaatiWrath`, `vaatiArm`, `vaatiTransfigured`, `vaatiEyesMacro`,
+  `vaatiProjectile`, `vaatiAppearingManager`). The 1.4.9 Gyorg sweep only
+  diffed the files the crash log named, which is why `gyorgFemaleEye` kept its
+  bug until #12; auditing the whole donor tree the same way shows Vaati had 26
+  guards we had none of. The substantive ones: two raw heap walks in
+  `vaatiArm.c` (`myHeap + 0x18 + 0x10*i` and `+ 0x28 + 0x10*i`) assume
+  `VaatiArm_HeapStruct`'s six leading pointers take 0x18 bytes — they take 0x30
+  here, so the walk lands in the pointer array and `((u16*)ptr)[2] = 0`
+  clobbers `entities[3]` (same class as the `gyorgMale` slot clear fixed in
+  1.4.9); the rest guard unchecked `CreateObject`/`CreateEnemy` results and
+  parent pointers that outlive the part they point at. `entity.c` gains
+  `Port_IsValidEntityAddr`, which those guards need because a deleted entity's
+  slot returns to the pool and a stale pointer is not NULL.
+- Preventive, not a verified fix: no Vaati crash has been reported or
+  reproduced here, and the arenas behave identically before and after.
+
 ## v1.4.12 — Gyorg Pair final-phase crash
 
 ### Fixed

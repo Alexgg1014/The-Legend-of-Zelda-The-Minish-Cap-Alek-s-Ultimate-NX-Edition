@@ -1,12 +1,13 @@
 {
   "schema": 1,
-  "version": "1.4.12",
+  "version": "1.4.13",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.12/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "5b6094714cb43ba08e03425c49fbedee0b854ce84f06b2591dd757417d06eba7",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.13/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "b107c4036548953bf442b6ed7ebbc04b76e6a75f013e7b0ee2d9502d52497b30",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Palace of Winds: the Gyorg Pair fight no longer crashes in its final phase"
+    "Vaati: hardening pass over the three final arenas before anyone gets there",
+    "Includes the 1.4.12 Gyorg Pair final-phase crash fix"
   ]
 }
