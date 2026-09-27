@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "version": "1.4.13",
+  "version": "1.4.14",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.13/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "b107c4036548953bf442b6ed7ebbc04b76e6a75f013e7b0ee2d9502d52497b30",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.14/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "a40d252e52e07bd5187bb21358f9220fb683f307f59595a71d6a2cb535a3fca1",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Vaati: hardening pass over the three final arenas before anyone gets there",
-    "Includes the 1.4.12 Gyorg Pair final-phase crash fix"
+    "Dojos: entering one with the light already off could close the game",
+    "Gyorg Pair final-phase crash fixed (1.4.12) and a hardening pass over Vaati and 24 more files"
   ]
 }

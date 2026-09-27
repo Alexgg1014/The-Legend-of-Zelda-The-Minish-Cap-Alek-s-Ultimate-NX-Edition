@@ -1,5 +1,32 @@
 # Changelog
 
+## v1.4.14 — dojo light-manager crash, donor sweep round 2
+
+### Fixed
+
+- **Entering a dojo with the room light already off crashed** (found in
+  regression testing, not reported). `sub_0805BB74` calls `LightManager_Main`
+  directly, outside the entity update loop, so `gUpdateContext.current_entity`
+  is not that manager — it is whatever ran last, or NULL at room load — and
+  `DeleteThisEntity()` deleted that instead, faulting on NULL. The manager now
+  deletes itself in that path, and `DeleteEntityAny` ignores a NULL argument.
+
+### Changed
+
+- **Donor sweep round 2: `#ifdef PC_PORT` guards ported into 24 more entity
+  files** (Vaati's remaining parts, `madderpillar`, `scissorsBeetle`,
+  `spinyBeetle`, `rupeeLike`, `octorokBossObject`, `object70`, `flame`,
+  `lightDoor`, `cutsceneMiscObject`, `crenelBeanSprout`, `houseDoorExterior`
+  and six managers), on top of the Vaati arenas in 1.4.13. Preventive: none of
+  these paths has been reproduced here, and the 12-scene screenshot set is
+  pixel-identical to 1.4.13.
+- **Not taken**, because they depend on donor-only machinery (their
+  `ENTITY_REF_*`/`MB74_SET` macro layer, `Port_GetPairedFusionTextData`,
+  `Port_ReadActiveRomPtrTable`, a `flag2` field, `port_tts.h`) or fail our
+  layout asserts: `mazaalHead`/`Macro`/`Bracelet`, `moldorm`, `gleerok`,
+  `peahat`/`bombPeahat`, `spearMoblin`, `wizzrobeWind`, `lightableSwitch`, the
+  levers, the fusion-text NPCs and the gust jar. Each needs its own port.
+
 ## v1.4.13 — Vaati hardening pass
 
 ### Changed
