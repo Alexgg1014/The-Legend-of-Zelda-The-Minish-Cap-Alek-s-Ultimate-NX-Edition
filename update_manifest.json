@@ -1,12 +1,13 @@
 {
   "schema": 1,
-  "version": "1.4.17",
+  "version": "1.4.18",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.17/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "c89636b862a8b867d2293285dd41e0bb504abaa0caed9b975207495d90061628",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.18/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "d76f16b2386615788a1becfb4ab4e9ef16f49ea80665958aaa9ac6c22c6889a7",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Pause menu: X / Y / ZL / ZR no longer also change what is on A and B"
+    "Dark Hyrule Castle: the Vaati Reborn fight is no longer skipped",
+    "Vaati Transfigured no longer restarts after you beat it"
   ]
 }

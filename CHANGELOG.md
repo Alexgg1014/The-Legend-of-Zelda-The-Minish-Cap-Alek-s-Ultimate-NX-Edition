@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.4.18 - Vaati Reborn skipped, Vaati Transfigured looping
+
+### Fixed
+
+- **The Dark Hyrule Castle final battle skipped phase 1 and looped phase 2**
+  (issue #15). `VaatiRebornEnemyType0PreAction` carries a PC_PORT-only guard
+  (`unk_86 > 2` -> `action = 7`) for phase-3 bosses restored from an old
+  quick/autosave, and it ran from the entity's first frame. The boss spawns
+  with the room and stays in action 0 until `script_Vaati1Intro` sets room
+  flag 0; only then does `Action0` zero `unk_86`. Until then the field is
+  whatever the recycled slot held - measured in the repro: `unk_86=56`,
+  `unk_80=168` on the first tick. Room flag 1 is what
+  `script_CutsceneOrchestratorV1Defeated` waits for, so the misfire warps the
+  player into Vaati Transfigured with the intro unfinished (local flag 0x78
+  never set); coming back with 0x7b set, the pre-action reaches action 7
+  before `Action0` can run its `CheckLocalFlag(0x7b) -> DeleteThisEntity()`,
+  so it dies again and warps again. Gated on `super->action != 0`: a restored
+  zombie is mid-combat (action 1..6), never 0.
+
 ## v1.4.17 - the pause-menu assignment no longer touches A and B
 
 ### Fixed
