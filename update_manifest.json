@@ -1,12 +1,13 @@
 {
   "schema": 1,
-  "version": "1.4.15",
+  "version": "1.4.16",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.15/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "b23da216a5bba4d3a047afb2793683774f173ad219eafce902c351763db61891",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.16/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "47bd60d9b4de0b439dc4aad92614d00615b4225abcc98b98172eaa4dfbc813df",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Dark Hyrule Castle: the four-cannon puzzle now destroys all four statues"
+    "Pause menu: press X / Y / ZL / ZR on an item to put it on that button",
+    "Includes the four-cannon puzzle fix"
   ]
 }

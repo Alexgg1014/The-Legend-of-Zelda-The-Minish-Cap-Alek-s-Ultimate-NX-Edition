@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.4.16 - assign items to X / Y / ZL / ZR from the pause menu
+
+### Added
+
+- **The pause screen's inventory now assigns to the extra buttons** (issue #13,
+  lbsbezerra). Highlighting an item and pressing X, Y, ZL or ZR writes that
+  slot, mirroring vanilla's A/B equip and using the same assignment the second
+  screen's ITEMS tab writes, so the two views agree. `port_softslots` gains
+  `Port_SoftSlots_RawEdge()`: the in-game dispatch ignores a slot with no item,
+  which is exactly the case the menu must accept to fill an empty slot.
+- Not done from the same request: drawing X/Y/ZL/ZR in the in-game HUD. That
+  HUD is the GBA's own tile-built HUD, already re-anchored for widescreen, so
+  it needs artwork and render work rather than a hook.
+
 ## v1.4.15 - four-cannon puzzle
 
 ### Fixed
