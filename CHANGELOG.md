@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.4.15 - four-cannon puzzle
+
+### Fixed
+
+- **The Dark Hyrule Castle four-cannon puzzle only destroyed two statues**
+  (issue #14). `sub_080AB634` reaches the statues through
+  `(Entity**)&this->parent->zVelocity`, which on GBA *is*
+  `AngryStatueManager::field_0x20[4]` (Manager is 0x20 bytes, first member at
+  +0x20 == `Entity::zVelocity`). Measured here: `zVelocity` is at +0x28 and
+  `field_0x20` at +0x38, so the window starts 0x10 early and covers
+  [+0x28, +0x30, +0x38, +0x40] - two manager fields, then `field_0x20[0]` and
+  `[1]`. Only the first two statues can ever match, which is the reported "only
+  the two on the left"; a non-NULL value spliced into the first two slots could
+  also fault inside `IsColliding`. Index the real array, NULL-guard the parent,
+  and stop `AngryStatue` from touching a parent that is already gone. Same
+  family as the 1.4.6 `AngryStatueManager` fixes.
+
 ## v1.4.14 — dojo light-manager crash, donor sweep round 2
 
 ### Fixed
