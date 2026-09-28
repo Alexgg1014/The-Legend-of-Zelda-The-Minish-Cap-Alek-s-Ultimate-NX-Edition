@@ -1,13 +1,12 @@
 {
   "schema": 1,
-  "version": "1.4.16",
+  "version": "1.4.17",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.16/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "47bd60d9b4de0b439dc4aad92614d00615b4225abcc98b98172eaa4dfbc813df",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.17/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "c89636b862a8b867d2293285dd41e0bb504abaa0caed9b975207495d90061628",
   "nro_size": 14223027,
   "min_updater_schema": 1,
   "changelog": [
-    "Pause menu: press X / Y / ZL / ZR on an item to put it on that button",
-    "Includes the four-cannon puzzle fix"
+    "Pause menu: X / Y / ZL / ZR no longer also change what is on A and B"
   ]
 }

@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.4.17 - the pause-menu assignment no longer touches A and B
+
+### Fixed
+
+- **A soft-slot press inside the inventory assigned *and* equipped.**
+  `Port_SoftSlots_Update` lets a slot with an item go active, and an active
+  slot forces `B_BUTTON` in `port_bios.c` so the engine spawns the item
+  through its own B dispatch. With the pause screen open that forced B lands
+  on `case B_BUTTON:` in `PauseMenu_ItemMenu_Update`, so the same press that
+  1.4.16 turned into "put this on X" also ran `ForceEquipItem(item, SLOT_B)`.
+  `ForceEquipItem` writes *both* slots when the other one already holds an
+  item with the same menu slot, which is why pressing X on the equipped sword
+  swapped A and B rather than only overwriting B. Slots held while the menu is
+  up are now latched as consumed until released, so the press only assigns,
+  and closing the menu with the button still down does not fire the item.
+
 ## v1.4.16 - assign items to X / Y / ZL / ZR from the pause menu
 
 ### Added
