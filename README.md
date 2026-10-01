@@ -6,7 +6,11 @@
 
 # The Legend of Zelda: The Minish Cap — Alek's Ultimate NX Edition
 
-**v1.3.9** · Native Nintendo Switch homebrew port · [Español → README_ES.md](README_ES.md)
+**v1.5.0** · Native Nintendo Switch homebrew port · [Español → README_ES.md](README_ES.md)
+
+<p align="center">
+  <img src="docs/images/v1.5-art.jpg" alt="Alek's Ultimate NX Edition v1.5" width="380">
+</p>
 
 ![Dual-screen gameplay on Nintendo Switch](docs/screenshots/hero/01_hero_dual.jpg)
 
@@ -16,9 +20,9 @@ A Nintendo Switch-focused edition of the native *The Minish Cap* port, built on
 the open-source decompilation and the native-port projects listed in
 [CREDITS.md](CREDITS.md). It runs the game natively on the Switch — this is not
 an emulator — and adds a second-screen companion display, touch and controller
-interaction, RetroAchievements, a full Brazilian Portuguese translation of the
-game, a localized port UI, an in-app updater and a set of Switch-specific
-quality-of-life features.
+interaction, RetroAchievements, a port interface in six languages, an in-game
+shortcut HUD, an in-app updater and a set of Switch-specific quality-of-life
+features.
 
 I made this because I wanted to play *The Minish Cap* this specific way on my
 own Switch: with a dual-screen layout in the spirit of the DS Zelda games, a
@@ -29,6 +33,25 @@ for their own work.
 This project did **not** create the Minish Cap decompilation, the native PC
 port, or the original dual-screen concept. It stands on the projects credited
 below — please see [CREDITS.md](CREDITS.md) for the full lineage.
+
+## What's new in v1.5
+
+The first release confirmed **completable from the beginning through the final
+credits on Nintendo Switch hardware**. That is not a promise of zero bugs: the
+final sequence and the credits were fixed, and then played through end to end.
+
+- **Ending and credits** — Vaati Transfigured no longer loops, the credits no
+  longer crash when they start, and they now close with thanks pages and the
+  Alek's Ultimate title.
+- **In-game shortcut HUD** — the X / Y / ZL / ZR shortcuts now show on the game
+  screen itself, not only on the second screen: the item icon on a button badge,
+  with bomb and arrow counts, along the bottom-left. Choose FULL, ICONS or OFF
+  (the vanilla HUD) under SETTINGS → DISPLAY → SHORTCUT HUD.
+- **Shortcuts only fire what the current save owns** — an assignment kept from
+  another save file stays inert until this one finds the item.
+- **Widescreen** — fixed a seam on the top row of a room under screen shake.
+- **Safer item handling** — an item entity with a bad ID is dropped before it
+  can read outside its table.
 
 ## Features
 
@@ -42,6 +65,9 @@ below — please see [CREDITS.md](CREDITS.md) for the full lineage.
   one-button roll attack, Pegasus dash that turns with the stick (1.4.1),
   shells cap 9999, no Ezlo hint after loading a save, fairer figurine odds,
   optional Hero Mode and Ezlo-tutorial skip.
+- **In-game shortcut HUD** (new in v1.5) — X / Y / ZL / ZR item cells on the
+  game screen, in NORMAL, DUAL and FLIP; FULL / ICONS / OFF in SETTINGS →
+  DISPLAY.
 - **Screen filters** — scanlines (hard / soft) and a GBA LCD grid, drawn on
   the GPU at no FPS cost (SETTINGS → DISPLAY).
 - **Three display modes**
@@ -63,9 +89,6 @@ below — please see [CREDITS.md](CREDITS.md) for the full lineage.
   overlay with **Minus** and stays up on any tab: D-pad moves, **A / B**
   activate (on ITEMS: equip to the A or B slot), **L / R** cycle the tabs,
   **A** on the map opens the region Link is standing in.
-- **Full Brazilian Portuguese translation of the game** (every dialogue, sign
-  and item description — 2910 messages), running on the USA ROM. Select it
-  under SETTINGS → GENERAL → LANGUAGE.
 - **RetroAchievements** — login, game recognition, Rich Presence, unlock
   notifications with real badge artwork, and **offline play**: unlocks earned
   without a connection are queued with their original time and sent on
@@ -83,10 +106,13 @@ below — please see [CREDITS.md](CREDITS.md) for the full lineage.
 - **Talk to Ezlo** shortcut (Left Stick click by default, rebindable), a
   **Return to Title** entry, and a contextual **Action Hint** for the R button
   (OFF / CONTEXTUAL / ON).
-- **Localized port UI** in English, Español, Français, Deutsch, Italiano and
-  Português (Brasil). (The original game's own dialogue localization is
-  Nintendo's; this project localizes the port's added interface and ships the
-  PT-BR game translation as its own work.)
+- **Languages** — the port's own interface (menus, second screen, settings) in
+  six languages: English, Español, Français, Deutsch, Italiano and Português
+  (Brasil), all selectable under SETTINGS → GENERAL → LANGUAGE. The game's
+  original dialogue is Nintendo's and comes from your ROM. Brazilian
+  Portuguese is the one language that also has a complete game translation
+  (every dialogue, sign and item description — 2910 messages), made for this
+  project and running on the USA ROM.
 - **Fast Boot** — startup around 13–14 s on tested hardware; actual time
   depends on the SD card.
 - **Engine hardening** — the 1.3.x line audited every entity type for 64-bit
@@ -95,14 +121,24 @@ below — please see [CREDITS.md](CREDITS.md) for the full lineage.
   and softlock reports from the community. Details in
   [CHANGELOG.md](CHANGELOG.md).
 
-**Widescreen** (true 16:9 with more world on screen, no stretching) is in
-development for **v1.4** and is not part of v1.3.9.
+**Widescreen** (true 16:9 with more world on screen, no stretching) works in
+NORMAL mode. DUAL and FLIP keep the native 240-column canvas.
 
 ## Screenshots
 
 | DUAL | NORMAL | FLIP 270 |
 |---|---|---|
 | ![DUAL](docs/screenshots/gameplay/02_dual_gameplay.jpg) | ![NORMAL](docs/screenshots/gameplay/03_normal.jpg) | ![FLIP](docs/screenshots/flip/06_flip270.jpg) |
+
+v1.5: the shortcut HUD in DUAL and NORMAL, and the new pages at the end of the credits:
+
+| HUD in DUAL | HUD in NORMAL |
+|---|---|
+| ![HUD in DUAL](docs/screenshots/v1.5/hud_dual.jpg) | ![HUD in NORMAL](docs/screenshots/v1.5/hud_normal.jpg) |
+
+| Thanks (1) | Thanks (2) | Title page |
+|---|---|---|
+| ![Thanks 1](docs/screenshots/v1.5/credits_thanks_1.jpg) | ![Thanks 2](docs/screenshots/v1.5/credits_thanks_2.jpg) | ![Title](docs/screenshots/v1.5/credits_title.jpg) |
 
 Widescreen (v1.4.0), native 240 columns next to the 284-column 16:9 view:
 
@@ -303,8 +339,8 @@ This edition exists because of the projects below. The short version:
   decompilation everything is built on.
 - [Project Picori (999sian/tmc)](https://github.com/999sian/tmc) — the native
   PC port foundation. Its engine fixes are ported into this edition regularly
-  (up to v0.9.3 as of v1.3.9), and its widescreen work is the base of the
-  upcoming v1.4.
+  (up to v0.9.3 through the 1.3.x line, plus selected fixes from v0.9.5 in
+  v1.5), and its widescreen work is the base of this edition's widescreen.
 - [HayatoG/tmc](https://github.com/hayatog/tmc) — the original Nintendo Switch
   port and the direct base this tree is forked from.
 - [samyost1/tmc-android](https://github.com/samyost1/tmc-android) — the
@@ -313,7 +349,10 @@ This edition exists because of the projects below. The short version:
   the 3DS dual-screen adaptation; several of its engine fixes are ported here.
 
 Thanks to everyone testing on real hardware and reporting on GBAtemp and
-GitHub — most of the 1.3.x fixes started as one of your reports.
+GitHub — most of the 1.3.x fixes started as one of your reports. Special
+thanks to **mnavarretem86**, the first to finish the game on this port
+and who reported the ending and credits bugs that v1.5 fixes, and to
+**lbsbezerra** for the shortcut HUD button art and many enhancement ideas.
 
 Full roles, third-party libraries and license details:
 [CREDITS.md](CREDITS.md) · [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

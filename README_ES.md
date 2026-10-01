@@ -6,7 +6,11 @@
 
 # The Legend of Zelda: The Minish Cap — Alek's Ultimate NX Edition
 
-**v1.3.9** · Port homebrew nativo para Nintendo Switch · [English → README.md](README.md)
+**v1.5.0** · Port homebrew nativo para Nintendo Switch · [English → README.md](README.md)
+
+<p align="center">
+  <img src="docs/images/v1.5-art.jpg" alt="Alek's Ultimate NX Edition v1.5" width="380">
+</p>
 
 ![Juego a doble pantalla en Nintendo Switch](docs/screenshots/hero/01_hero_dual.jpg)
 
@@ -16,10 +20,9 @@ Una edición centrada en Nintendo Switch del port nativo de *The Minish Cap*,
 construida sobre la descompilación de código abierto y los proyectos de port
 nativo listados en [CREDITS.md](CREDITS.md). El juego corre de forma nativa en
 la Switch — no es un emulador — y añade una segunda pantalla de compañía,
-interacción táctil y por mando, RetroAchievements, una traducción completa del
-juego al portugués de Brasil, una interfaz del port localizada, un
-actualizador integrado y varias mejoras de calidad de vida específicas de
-Switch.
+interacción táctil y por mando, RetroAchievements, una interfaz del port en seis
+idiomas, un HUD de atajos dentro del juego, un actualizador integrado y varias
+mejoras de calidad de vida específicas de Switch.
 
 Lo hice porque quería jugar *The Minish Cap* de esta manera
 concreta en mi propia Switch: con una disposición a doble pantalla al estilo
@@ -30,6 +33,28 @@ o usarlo como punto de partida para su propio trabajo.
 Este proyecto **no** creó la descompilación de Minish Cap, ni el port nativo
 para PC, ni el concepto original de doble pantalla. Se apoya en los proyectos
 acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
+
+## Novedades de la v1.5
+
+La primera versión confirmada como **completable desde el principio hasta los
+créditos finales en hardware Nintendo Switch**. Eso no es una promesa de cero
+bugs: la secuencia final y los créditos se corrigieron y después se jugaron de
+principio a fin.
+
+- **Final y créditos** — Vaati Transfigured ya no entra en bucle, los créditos
+  ya no se caen al empezar y ahora cierran con páginas de agradecimientos y el
+  título de Alek's Ultimate.
+- **HUD de atajos dentro del juego** — los atajos X / Y / ZL / ZR ahora se ven
+  en la pantalla del juego, no solo en la segunda pantalla: el icono del objeto
+  sobre una insignia de botón, con el contador de bombas y flechas, abajo a la
+  izquierda. Elige COMPLETO, ICONOS o NO (el HUD original) en AJUSTES →
+  DISPLAY → HUD DE ATAJOS.
+- **Los atajos solo usan lo que tiene la partida actual** — una asignación
+  guardada desde otra partida queda inerte hasta que esta encuentre el objeto.
+- **Widescreen** — corregida una costura en la fila superior de una sala con
+  temblor de pantalla.
+- **Manejo de objetos más seguro** — una entidad de objeto con un ID inválido
+  se descarta antes de leer fuera de su tabla.
 
 ## Características
 
@@ -45,6 +70,9 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
   de botas Pegaso que gira con el stick (1.4.1), tope de conchas 9999, sin
   pista de Ezlo al cargar partida, figuras con mejores probabilidades, y
   opcionales Modo Héroe y saltar tutoriales de Ezlo.
+- **HUD de atajos dentro del juego** (nuevo en la v1.5) — celdas de objeto X /
+  Y / ZL / ZR en la pantalla del juego, en NORMAL, DUAL y FLIP; COMPLETO /
+  ICONOS / NO en AJUSTES → DISPLAY.
 - **Filtros de pantalla** — scanlines (fuertes / suaves) y rejilla LCD de GBA,
   dibujados en la GPU sin coste de FPS (AJUSTES → DISPLAY).
 - **Tres modos de pantalla**
@@ -69,9 +97,6 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
   superposición con **Menos** y se queda en cualquier pestaña: la cruceta
   mueve, **A / B** activan (en OBJETOS: equipar en la ranura A o B), **L / R**
   cambian de pestaña, y **A** sobre el mapa abre la región donde está Link.
-- **Traducción completa del juego al portugués de Brasil** (todos los
-  diálogos, carteles y descripciones — 2910 mensajes), sobre la ROM USA. Se
-  elige en AJUSTES → GENERAL → IDIOMA.
 - **RetroAchievements** — inicio de sesión, reconocimiento del juego, Rich
   Presence, notificaciones de desbloqueo con la insignia real, y **juego sin
   conexión**: los logros conseguidos offline se guardan con su hora original y
@@ -90,10 +115,13 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
 - Atajo **Hablar con Ezlo** (click del stick izquierdo por defecto,
   reasignable), entrada **Volver al Título**, y **Ayuda de Acción** contextual
   para el botón R (NO / CONTEXTUAL / SÍ).
-- **Interfaz del port localizada** en English, Español, Français, Deutsch,
-  Italiano y Português (Brasil). (La localización de los diálogos originales
-  es de Nintendo; este proyecto localiza la interfaz añadida por el port y
-  aporta la traducción PT-BR del juego como trabajo propio.)
+- **Idiomas** — la interfaz propia del port (menús, segunda pantalla, ajustes)
+  en seis idiomas: English, Español, Français, Deutsch, Italiano y Português
+  (Brasil), todos seleccionables en AJUSTES → GENERAL → IDIOMA. Los diálogos
+  originales del juego son de Nintendo y salen de tu ROM. El portugués de
+  Brasil es el único idioma que además tiene una traducción completa del juego
+  (todos los diálogos, carteles y descripciones — 2910 mensajes), hecha para
+  este proyecto y que funciona sobre la ROM USA.
 - **Fast Boot** — arranque de unos 13–14 s en el hardware probado; el tiempo
   real depende de la tarjeta SD.
 - **Motor reforzado** — la línea 1.3.x auditó todos los tipos de entidad
@@ -102,14 +130,24 @@ acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
   PC hasta su v0.9.3 y cerró los crashes y bloqueos reportados por la
   comunidad. Detalles en [CHANGELOG.md](CHANGELOG.md).
 
-**Widescreen** (16:9 real con más mundo en pantalla, sin estirar) está en
-desarrollo para la **v1.4** y no forma parte de la v1.3.9.
+**Widescreen** (16:9 real con más mundo en pantalla, sin estirar) funciona en
+modo NORMAL. DUAL y FLIP mantienen el lienzo nativo de 240 columnas.
 
 ## Capturas
 
 | DUAL | NORMAL | FLIP 270 |
 |---|---|---|
 | ![DUAL](docs/screenshots/gameplay/02_dual_gameplay.jpg) | ![NORMAL](docs/screenshots/gameplay/03_normal.jpg) | ![FLIP](docs/screenshots/flip/06_flip270.jpg) |
+
+v1.5: el HUD de atajos en DUAL y NORMAL, y las páginas nuevas al final de los créditos:
+
+| HUD en DUAL | HUD en NORMAL |
+|---|---|
+| ![HUD en DUAL](docs/screenshots/v1.5/hud_dual.jpg) | ![HUD en NORMAL](docs/screenshots/v1.5/hud_normal.jpg) |
+
+| Agradecimientos (1) | Agradecimientos (2) | Página del título |
+|---|---|---|
+| ![Agradecimientos 1](docs/screenshots/v1.5/credits_thanks_1.jpg) | ![Agradecimientos 2](docs/screenshots/v1.5/credits_thanks_2.jpg) | ![Título](docs/screenshots/v1.5/credits_title.jpg) |
 
 Pantalla ancha (v1.4.0), 240 columnas nativas junto a la vista 16:9 de 284:
 
@@ -328,8 +366,9 @@ Esta edición existe gracias a los proyectos siguientes. La versión corta:
   Minish Cap sobre la que se construye todo.
 - [Project Picori (999sian/tmc)](https://github.com/999sian/tmc) — la base del
   port nativo para PC. Sus correcciones de motor se portan a esta edición con
-  regularidad (hasta su v0.9.3 en la v1.3.9), y su trabajo de widescreen es la
-  base de la próxima v1.4.
+  regularidad (hasta su v0.9.3 en la línea 1.3.x, más correcciones puntuales de
+  su v0.9.5 en la v1.5), y su trabajo de widescreen es la base del widescreen
+  de esta edición.
 - [HayatoG/tmc](https://github.com/hayatog/tmc) — el port original para
   Nintendo Switch y la base directa de la que parte este árbol.
 - [samyost1/tmc-android](https://github.com/samyost1/tmc-android) — el
@@ -340,7 +379,10 @@ Esta edición existe gracias a los proyectos siguientes. La versión corta:
 
 Gracias a todos los que prueban en hardware real y reportan en GBAtemp y
 GitHub — la mayoría de los arreglos de la 1.3.x empezaron como un reporte
-vuestro.
+vuestro. Un agradecimiento especial a **mnavarretem86**, el primero en terminar el juego en este port
+y que reportó los bugs del final y de los créditos que
+corrige la v1.5, y a **lbsbezerra** por el arte de los botones del HUD de
+atajos y por muchas ideas de mejoras.
 
 Roles completos, bibliotecas de terceros y detalles de licencias:
 [CREDITS.md](CREDITS.md) · [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

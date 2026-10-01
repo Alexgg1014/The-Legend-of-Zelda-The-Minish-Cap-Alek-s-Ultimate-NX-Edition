@@ -57,7 +57,7 @@ is credited as such below.
 
 Switch platform layer (libnx integration, display layouts NORMAL / DUAL /
 FLIP 270, presenter, render worker pool), second-screen Switch renderer and
-theme, Story Guide content system, port UI localization (EN/ES/FR/DE/IT),
+theme, Story Guide content system, port UI localization (EN/ES/FR/DE/IT/PT-BR),
 RetroAchievements integration on Switch (badges, toasts, logout),
 port-managed autosave UX, Return to Title, startup-time work, CPU clock
 handling, and assorted rendering fixes (including the mode-2 affine/HBlank-DMA
@@ -67,8 +67,10 @@ per-scanline fix). Much of this builds directly on the layers above.
 
 The multilingual layer in this edition covers the **port-owned UI only** —
 the second-screen panel, the settings, the Story Guide and the port's own
-prompts — in English, Spanish, French, German and Italian. It was implemented
-for this edition as part of the Switch-specific work.
+prompts — in English, Spanish, French, German, Italian and Brazilian
+Portuguese. It was implemented for this edition as part of the Switch-specific
+work. Brazilian Portuguese additionally has a complete translation of the game's
+dialogue, made for this project.
 
 Localization implementation and wording were informed by the original regional
 releases and by related community port work
@@ -80,6 +82,15 @@ releases and by related community port work
 The game's own dialogue and text are Nintendo's original translations, read at
 runtime from the user's ROM. This project does not claim authorship of them,
 and the recommended tested base for v0.1.1 is the USA ROM.
+
+## Community contributions
+
+- **lbsbezerra** — the button badge art for the in-game shortcut HUD (X / Y /
+  ZL / ZR, v1.5) and many enhancement ideas.
+- **mnavarretem86** — played the game through to the end on the Switch port and
+  reported the ending and credits bugs fixed in v1.5. Thanked in the game's
+  credits, alongside lbsbezerra.
+- Everyone who tested on real hardware and reported on GBAtemp and GitHub.
 
 ## Third-party libraries
 

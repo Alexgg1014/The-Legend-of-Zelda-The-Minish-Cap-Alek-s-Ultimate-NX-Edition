@@ -1,13 +1,15 @@
 {
   "schema": 1,
-  "version": "1.4.18",
+  "version": "1.5.0",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.4.18/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "d76f16b2386615788a1becfb4ab4e9ef16f49ea80665958aaa9ac6c22c6889a7",
-  "nro_size": 14223027,
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.5.0/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "bcf8512a3138e0eafb9cc44980566252fb935aeeda0dc991799df222e65e8efa",
+  "nro_size": 14247603,
   "min_updater_schema": 1,
   "changelog": [
-    "Dark Hyrule Castle: the Vaati Reborn fight is no longer skipped",
-    "Vaati Transfigured no longer restarts after you beat it"
+    "The game is now confirmed completable from the start to the final credits on Switch hardware",
+    "Credits no longer crash when they start; new thanks pages at the end",
+    "X / Y / ZL / ZR shortcuts now show on the game screen (SETTINGS > DISPLAY > SHORTCUT HUD)",
+    "Shortcuts only use items the current save owns"
   ]
 }

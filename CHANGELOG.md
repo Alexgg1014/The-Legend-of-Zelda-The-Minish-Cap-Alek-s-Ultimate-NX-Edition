@@ -1,5 +1,59 @@
 # Changelog
 
+## v1.5.0 - completable end to end, in-game shortcut HUD
+
+First release confirmed completable from the beginning through the final
+credits on Nintendo Switch hardware. The final sequence and the credits were
+played through end to end by @mnavarretem86, whose reports (and save) drove
+the 1.4.18 and 1.5.0 ending fixes.
+
+### Fixed
+
+- **The credits crashed the moment they started** (`MisalignedPC`,
+  `080a36c1080a3609`). The staff roll's two handler tables
+  (`gUnk_08127D00`, `gUnk_08127D10`) come out of `data_const_stubs.c` as raw ROM
+  bytes - 32-bit GBA code pointers - and were indexed as native function-pointer
+  arrays, so on a 64-bit host two adjacent GBA addresses fused into one invalid
+  pc. PC_PORT now uses native tables of the real `StaffrollTask_*` handlers.
+- **Shortcuts (X / Y / ZL / ZR) fired items the current save does not own.**
+  `tmc.softslots` is shared by every save file. Assignments now resolve through
+  the inventory; upgrade pairs (bombs / remote bombs, bow / light arrows,
+  boomerangs, shields, lantern off / on) resolve to whichever member the save
+  holds, so an upgrade or a lit lantern does not strand a slot. The raw value is
+  kept, so menus still edit what was picked. (Adapted from Picori 8a392aa7.)
+- **`ItemInit` indexed `gPlayerItemDefinitions[this->id]` before any bounds
+  check.** The same check and `PLAYER_ITEM_BAD_ID` record that `ItemUpdate`
+  already had now sit at the top of `ItemInit`, and `ItemUpdate` stops once the
+  entity is gone. (Picori a8ad0e74's idea, kept because this tree has no ROM
+  loader rework.)
+- **Widescreen: a seam on the room's top row under negative screen shake.**
+  Near the room top the native fill duplicates map row 0 into the padding row;
+  `ShadowPopulate` blanked it. (Picori c8bfe78a.)
+
+### Added
+
+- **In-game HUD for the X / Y / ZL / ZR shortcuts.** One `UIElement` per slot
+  along the bottom-left (ZL X Y ZR): the equipped item's icon, ammo counts
+  included, on a button badge in the HUD's own style. A slot with nothing the
+  save owns draws nothing. The cells slide away with the HUD hide flags and
+  while a text box is open, like A and B. The HUD's own VRAM block is full, so
+  the cells borrow the last four gfx slots (tiles 0x3C0..0x3FF) and draw only
+  while the engine reports them free. **SETTINGS -> DISPLAY -> SHORTCUT HUD**
+  (`softslot_hud` in `config.json`): FULL (default), ICONS or OFF (vanilla HUD).
+  Badge art by lbsbezerra.
+- **Thanks pages at the end of the credits** for mnavarretem86 and lbsbezerra
+  (English, Spanish or Portuguese by the port language) and a closing page with
+  the Alek's Ultimate title. The retail credits table is not edited: a copy with
+  the new entries is built when the staff roll starts, and the original is used
+  as is if its end entry cannot be found.
+
+### Desktop build (not shipped)
+
+- The upstream update popup is now opt-in (`TMC_UPDATE_CHECK=1`).
+- `STAFFROLL` script command starts the credits for scripted runs.
+- `CREDITS_TEST=1` Switch build option (QA only, off by default) starts the
+  credits shortly after a save is entered.
+
 ## v1.4.18 - Vaati Reborn skipped, Vaati Transfigured looping
 
 ### Fixed
