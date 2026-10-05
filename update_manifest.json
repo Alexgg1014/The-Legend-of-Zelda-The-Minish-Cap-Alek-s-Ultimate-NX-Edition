@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "version": "1.5.0",
+  "version": "1.5.1",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.5.0/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "bcf8512a3138e0eafb9cc44980566252fb935aeeda0dc991799df222e65e8efa",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.5.1/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "8bacc136cae7b936fb5ae08247256a619fa10cf44322d4dea6c7ac978cc54153",
   "nro_size": 14247603,
   "min_updater_schema": 1,
   "changelog": [
-    "The game is now confirmed completable from the start to the final credits on Switch hardware",
-    "Credits no longer crash when they start; new thanks pages at the end",
-    "X / Y / ZL / ZR shortcuts now show on the game screen (SETTINGS > DISPLAY > SHORTCUT HUD)",
-    "Shortcuts only use items the current save owns"
+    "Fixed a crash when walking near a townsperson in Percy's house",
+    "Fixed a crash when duplicating Link with the Four Sword",
+    "The small lily pads of Castor Wilds move again",
+    "Royal Valley lights up without the lantern again"
   ]
 }

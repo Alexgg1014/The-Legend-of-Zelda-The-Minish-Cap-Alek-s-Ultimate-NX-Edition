@@ -90,6 +90,8 @@ and the recommended tested base for v0.1.1 is the USA ROM.
 - **mnavarretem86** — played the game through to the end on the Switch port and
   reported the ending and credits bugs fixed in v1.5. Thanked in the game's
   credits, alongside lbsbezerra.
+- **digdat0** — reported the Castor Wilds lily pads, the Royal Valley light and
+  the Link-clone crash, with saves and a crash log; fixed in v1.5.1.
 - Everyone who tested on real hardware and reported on GBAtemp and GitHub.
 
 ## Third-party libraries

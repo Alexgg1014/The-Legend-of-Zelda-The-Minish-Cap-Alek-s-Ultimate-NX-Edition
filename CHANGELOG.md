@@ -1,5 +1,32 @@
 # Changelog
 
+## v1.5.1 - crash fixes, Castor Wilds lily pads, Royal Valley light
+
+### Fixed
+
+- **Crash near a townsperson in Percy's house** (Data Abort, `far=0x6`, in
+  `sub_080784E4`). `townsperson.c:sub_08061FB0` sets the NPC's `hitbox` to NULL from
+  a script and the NPC stays an interaction candidate; the check then read
+  `&hitbox->width`. On GBA that is a BIOS read, here it faults. A candidate whose
+  entity has no hitbox is skipped (a zero-width box could never match anyway).
+- **Crash when duplicating Link** (Data Abort, `far=0` in
+  `CalculateEntityTileCollisions`, report by @digdat0). A `PlayerClone` in its
+  init action has no hitbox yet, while `button.c:sub_08081FF8` pushes every
+  clone through `sub_080044AE`. The routine now returns with `collisions = 0` on a
+  NULL hitbox. `SurfaceAction_CloneTile` also initialises `n`, which indexes
+  `gPlayerClones[3]`. Fixed from the log, not reproduced.
+- **Castor Wilds small lily pads (type2 0x80-0x82) never moved**
+  (@digdat0). `gLilypadRails` was a zeroed `void*[32]` stub; on GBA it is three
+  ROM pointers. The three rail scripts (`gUnk_080FEDA4`, `gUnk_080FEDDA`,
+  `gUnk_080FEDF8`) are now static arrays. The kinstone fusion code reads the same
+  table.
+- **Royal Valley stayed dark without the lantern** (@digdat0).
+  `MiscManager_Type7` walks `gUnk_08108354` until `x == 0xFFFF`, but the
+  terminator was a separate `const u32` that only followed the array on GBA. The
+  Switch image places other rodata right after it, so the loop kept reading
+  bogus "regions" and overwrote the light level. The terminator is an element of
+  the array now. Not visible on PC, where the layout differs.
+
 ## v1.5.0 - completable end to end, in-game shortcut HUD
 
 First release confirmed completable from the beginning through the final
