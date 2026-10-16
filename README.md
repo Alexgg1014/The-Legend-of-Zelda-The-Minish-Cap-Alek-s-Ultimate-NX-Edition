@@ -9,7 +9,7 @@
 **v2.0.0** · Native Nintendo Switch homebrew port · [Español → README_ES.md](README_ES.md)
 
 <p align="center">
-  <img src="docs/images/v1.5-art.jpg" alt="Alek's Ultimate NX Edition v1.5" width="380">
+  <img src="docs/images/v2-art.webp" alt="Alek's Ultimate NX Edition v2 — Randomizer" width="380">
 </p>
 
 ![Dual-screen gameplay on Nintendo Switch](docs/screenshots/hero/01_hero_dual.jpg)

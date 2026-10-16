@@ -1,5 +1,9 @@
 # Alek's Ultimate NX Edition v2.0.0
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/main/docs/images/v2-art.webp" alt="Alek's Ultimate NX Edition v2 — Randomizer" width="420">
+</p>
+
 **The last big update.** A randomizer mode, widescreen in Dual mode, separate
 music and effects volume, cheats, and a stack of quality-of-life options.
 
