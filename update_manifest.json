@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "version": "1.5.1",
+  "version": "2.0.0",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v1.5.1/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "8bacc136cae7b936fb5ae08247256a619fa10cf44322d4dea6c7ac978cc54153",
-  "nro_size": 14247603,
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v2.0.0/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "7b9b52a607c501a7783e6fb6b88d6ad770528deb3dbf0232336d71603fea768d",
+  "nro_size": 14915251,
   "min_updater_schema": 1,
   "changelog": [
-    "Fixed a crash when walking near a townsperson in Percy's house",
-    "Fixed a crash when duplicating Link with the Four Sword",
-    "The small lily pads of Castor Wilds move again",
-    "Royal Valley lights up without the lantern again"
+    "Randomizer mode (Beta): choose NORMAL or RANDOMIZER when you name a new file",
+    "Widescreen in Dual mode at 2X",
+    "Music and effects volume, voice mutes, cheats, autosave interval, stick dead zone",
+    "Fixed the white blob on lit torches, Link over door frames on stairs, widescreen during transitions"
   ]
 }

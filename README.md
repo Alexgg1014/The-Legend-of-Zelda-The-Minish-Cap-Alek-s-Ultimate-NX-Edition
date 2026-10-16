@@ -6,7 +6,7 @@
 
 # The Legend of Zelda: The Minish Cap — Alek's Ultimate NX Edition
 
-**v1.5.1** · Native Nintendo Switch homebrew port · [Español → README_ES.md](README_ES.md)
+**v2.0.0** · Native Nintendo Switch homebrew port · [Español → README_ES.md](README_ES.md)
 
 <p align="center">
   <img src="docs/images/v1.5-art.jpg" alt="Alek's Ultimate NX Edition v1.5" width="380">
@@ -34,29 +34,27 @@ This project did **not** create the Minish Cap decompilation, the native PC
 port, or the original dual-screen concept. It stands on the projects credited
 below — please see [CREDITS.md](CREDITS.md) for the full lineage.
 
-## What's new in v1.5
+## What's new in v2.0
 
-The first release confirmed **completable from the beginning through the final
-credits on Nintendo Switch hardware**. That is not a promise of zero bugs: the
-final sequence and the credits were fixed, and then played through end to end.
+The last big update.
 
-- **Ending and credits** — Vaati Transfigured no longer loops, the credits no
-  longer crash when they start, and they now close with thanks pages and the
-  Alek's Ultimate title.
-- **In-game shortcut HUD** — the X / Y / ZL / ZR shortcuts now show on the game
-  screen itself, not only on the second screen: the item icon on a button badge,
-  with bomb and arrow counts, along the bottom-left. Choose FULL, ICONS or OFF
-  (the vanilla HUD) under SETTINGS → DISPLAY → SHORTCUT HUD.
-- **Shortcuts only fire what the current save owns** — an assignment kept from
-  another save file stays inert until this one finds the item.
-- **Widescreen** — fixed a seam on the top row of a room under screen shake.
-- **Safer item handling** — an item entity with a bad ID is dropped before it
-  can read outside its table.
+- **Randomizer (Beta)** — when you name a new file, choose NORMAL or
+  RANDOMIZER. Every chest, NPC, shop and dungeon reward is shuffled; the goal is
+  still to defeat Vaati. Four modes (Standard, Keysanity, Entrances, Keys +
+  Entrances), every seed checked before you can play it, and a RANDOMIZER page
+  under `−` with a visual tracker, Ezlo's notes and an optional spoiler.
+  *Beta: generation is verified, but no full run has been finished on Switch
+  yet — please report a stuck file with its seed hash.*
+- **Widescreen in Dual mode** at 2X.
+- **Music and effects volume**, voice and low-health-beep mutes, **cheats**,
+  autosave interval, stick dead zone, and `−` reopens the tab you left.
+- **Fixes** — lit torches no longer draw a white blob, Link stays behind door
+  frames on stairs, widescreen holds through room and area transitions.
 
 ## Features
 
 - **Native Switch build** — no emulator, runs as homebrew (NRO).
-- **Widescreen (16:9)** in NORMAL mode: the camera shows more of the room on
+- **Widescreen (16:9)** in NORMAL mode (and DUAL at 2X): the camera shows more of the room on
   both sides, text boxes stay centred and the HUD anchors to the edges. Rooms
   narrower than the view are pillarboxed, never stretched. Holds 60 FPS at the
   stock CPU clock thanks to the tile-based renderer.
@@ -122,7 +120,8 @@ final sequence and the credits were fixed, and then played through end to end.
   [CHANGELOG.md](CHANGELOG.md).
 
 **Widescreen** (true 16:9 with more world on screen, no stretching) works in
-NORMAL mode. DUAL and FLIP keep the native 240-column canvas.
+NORMAL mode, and in DUAL at 2X (using the room beside the panel). DUAL at 3X
+and FLIP keep the native 240-column canvas.
 
 ## Screenshots
 

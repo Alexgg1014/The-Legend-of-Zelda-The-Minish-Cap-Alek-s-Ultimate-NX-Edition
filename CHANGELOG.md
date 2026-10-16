@@ -1,5 +1,46 @@
 # Changelog
 
+## v2.0.0 - randomizer (beta), Dual widescreen, volume, cheats
+
+### New
+
+- **Randomizer (Beta).** Core from Project Picori `bd06a639` (GPL-3.0) in
+  `port/rando/`; `default.logic` embedded and SHA-256 pinned. The mode is chosen
+  when a new file is named. Each randomizer save carries an 84-byte block in
+  `SaveFile.filler4ac` (magic `RNV2`, seed identity, binding hash, collected
+  bitmap, CRC) and a write-once manifest `rando/<id>.tmcr`; activation
+  regenerates the seed and requires an identical placement, otherwise the file
+  shows an error and never starts as vanilla (the 3DS port's issue #42 class).
+  Every generated seed passes an independent beatability check; corpus
+  24,000/24,000 across all presets. Presets Standard / Keysanity / Entrances /
+  Keys+Entrances, pools Balanced / Reduced / Plentiful, Extra checks.
+  RetroAchievements idle on randomizer saves.
+- Randomizer start: the post-intro start left `global_progress` at 1, so Hyrule
+  Town redirected to the festival town with a frozen cast; ported Picori's three
+  `roomInit` hunks, gated on the randomizer.
+- Ammo without its container (bombs before the bag, arrows before the bow) is
+  handed out as rupees of similar worth (`Rando_SetAwardFilter`).
+- Panel: RANDOMIZER page (tracker, Ezlo's notes, spoiler, cosmetics,
+  diagnostic); music / effects volume applied per m4a player (BGM ids 1-99);
+  Ezlo / NPC voice and low-health mutes (after Picori `port_audio_mute`);
+  cheats page (`port_cheats.c`, applied on the game thread); autosave interval;
+  stick dead zone; Minus reopens the last tab in Normal mode.
+- Widescreen in DUAL at 2X: `Port_DisplayLayout_DualMaxViewWidth`.
+
+### Fixed
+
+- **OBJ window** (attr0 mode 2) implemented in the PPU (`viruappu-obj-window.patch`):
+  `litArea.c` light circles drew as a white blob.
+- **Stairs occlusion** regressed in 1.4.14: the donor sweep took the 3DS
+  `object70.c` hunk (priority 2); reverted to priority 3 + priority propagation.
+- **Widescreen:** adjacent-room scrolls and area-change fades keep the wide
+  view; the Minish Woods light rays (45-degree stripe texture, not seamless at
+  256 px) continue diagonally past x=240 (`viruappu-ws-diag-overlay.patch`).
+- Missing-return UB where GBA relied on r0: `lockedDoor.c sub_080837B0`,
+  `enterPortalSubtask.c sub_0804AD18`, `kinstoneMenu.c sub_080A4418`,
+  `playerItemUtils.c sub_080A7CFC`.
+- Spanish `¿` rendered upside down (bank-2 glyph resolution).
+
 ## v1.5.1 - crash fixes, Castor Wilds lily pads, Royal Valley light
 
 ### Fixed

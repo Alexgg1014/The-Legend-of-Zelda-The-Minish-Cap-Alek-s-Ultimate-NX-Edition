@@ -6,7 +6,7 @@
 
 # The Legend of Zelda: The Minish Cap — Alek's Ultimate NX Edition
 
-**v1.5.1** · Port homebrew nativo para Nintendo Switch · [English → README.md](README.md)
+**v2.0.0** · Port homebrew nativo para Nintendo Switch · [English → README.md](README.md)
 
 <p align="center">
   <img src="docs/images/v1.5-art.jpg" alt="Alek's Ultimate NX Edition v1.5" width="380">
@@ -34,32 +34,30 @@ Este proyecto **no** creó la descompilación de Minish Cap, ni el port nativo
 para PC, ni el concepto original de doble pantalla. Se apoya en los proyectos
 acreditados — consulta [CREDITS.md](CREDITS.md) para el linaje completo.
 
-## Novedades de la v1.5
+## Novedades de la v2.0
 
-La primera versión confirmada como **completable desde el principio hasta los
-créditos finales en hardware Nintendo Switch**. Eso no es una promesa de cero
-bugs: la secuencia final y los créditos se corrigieron y después se jugaron de
-principio a fin.
+La última gran actualización.
 
-- **Final y créditos** — Vaati Transfigured ya no entra en bucle, los créditos
-  ya no se caen al empezar y ahora cierran con páginas de agradecimientos y el
-  título de Alek's Ultimate.
-- **HUD de atajos dentro del juego** — los atajos X / Y / ZL / ZR ahora se ven
-  en la pantalla del juego, no solo en la segunda pantalla: el icono del objeto
-  sobre una insignia de botón, con el contador de bombas y flechas, abajo a la
-  izquierda. Elige COMPLETO, ICONOS o NO (el HUD original) en AJUSTES →
-  DISPLAY → HUD DE ATAJOS.
-- **Los atajos solo usan lo que tiene la partida actual** — una asignación
-  guardada desde otra partida queda inerte hasta que esta encuentre el objeto.
-- **Widescreen** — corregida una costura en la fila superior de una sala con
-  temblor de pantalla.
-- **Manejo de objetos más seguro** — una entidad de objeto con un ID inválido
-  se descarta antes de leer fuera de su tabla.
+- **Randomizer (Beta)** — al nombrar un archivo nuevo eliges NORMAL o
+  RANDOMIZER. Cofres, NPCs, tiendas y premios de mazmorra se revuelven; la meta
+  sigue siendo vencer a Vaati. Cuatro modos (Estándar, Keysanity, Entradas,
+  Llaves + Entradas), cada semilla se verifica antes de poder jugarla, y una
+  página RANDOMIZER en `−` con tracker visual, notas de Ezlo y spoiler opcional.
+  *Beta: la generación está verificada, pero aún nadie ha terminado una partida
+  completa en Switch; si un archivo se atora, repórtalo con el hash de la
+  semilla.*
+- **Pantalla ancha en modo Dual** a 2X.
+- **Volumen de música y de efectos**, silenciar voces y el pitido de vida baja,
+  **trucos**, intervalo del autoguardado, zona muerta del stick, y `−` reabre la
+  pestaña donde lo dejaste.
+- **Arreglos** — las antorchas ya no pintan una mancha blanca, Link queda detrás
+  del marco en las escaleras y la pantalla ancha se mantiene al cambiar de sala
+  o de zona.
 
 ## Características
 
 - **Compilación nativa para Switch** — sin emulador, funciona como homebrew (NRO).
-- **Pantalla ancha (16:9)** en modo NORMAL: la cámara muestra más sala a ambos
+- **Pantalla ancha (16:9)** en modo NORMAL (y DUAL a 2X): la cámara muestra más sala a ambos
   lados, los cuadros de texto quedan centrados y el HUD se ancla a los bordes.
   Las salas más estrechas que la vista se muestran con bandas, nunca
   estiradas. Mantiene 60 FPS con la CPU a frecuencia de serie gracias al
@@ -131,7 +129,8 @@ principio a fin.
   comunidad. Detalles en [CHANGELOG.md](CHANGELOG.md).
 
 **Widescreen** (16:9 real con más mundo en pantalla, sin estirar) funciona en
-modo NORMAL. DUAL y FLIP mantienen el lienzo nativo de 240 columnas.
+modo NORMAL, y en DUAL a 2X (usa el espacio junto al panel). DUAL a 3X y FLIP
+mantienen el lienzo nativo de 240 columnas.
 
 ## Capturas
 
