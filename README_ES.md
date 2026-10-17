@@ -6,7 +6,7 @@
 
 # The Legend of Zelda: The Minish Cap — Alek's Ultimate NX Edition
 
-**v2.0.0** · Port homebrew nativo para Nintendo Switch · [English → README.md](README.md)
+**v2.0.1** · Port homebrew nativo para Nintendo Switch · [English → README.md](README.md)
 
 <p align="center">
   <img src="docs/images/v2-art.webp" alt="Alek's Ultimate NX Edition v2 — Randomizer" width="380">

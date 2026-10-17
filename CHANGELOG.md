@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.0.1 - pause menu in widescreen, Definitive Edition options
+
+### Fixed
+
+- **Pause menu shifted with a smeared R tab** in widescreen. The area-change
+  fade hold added in 2.0.0 (`Port_Widescreen_PresentWidth` keeps the last wide
+  width while `gRoomControls.width == 0`) also triggered inside subtasks:
+  `Subtask_Init` clears `gRoomControls`, so the whole pause menu was presented
+  at 284 with column 239 repeated. No hold while `gMain.substate ==
+  GAMEMAIN_SUBTASK`.
+
+### New
+
+- Five QUALITY OF LIFE toggles after the Minish Cap Definitive Edition romhack
+  (issue #22), off by default (`REBORN_FEAT_*`, not in the default mask): fairy
+  charms 5 min (`charmTimer`), fairies heal 12 hearts (caught `ITEM_FAIRY`,
+  bottled, auto-revive), `ITEM_SHELLS` drops x5, `ITEM_SHELLS30` x10 in
+  Stockwell's shop only, figurine capsule skips its drop/crack animation.
+
 ## v2.0.0 - randomizer (beta), Dual widescreen, volume, cheats
 
 ### New

@@ -1,15 +1,14 @@
 {
   "schema": 1,
-  "version": "2.0.0",
+  "version": "2.0.1",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v2.0.0/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "7b9b52a607c501a7783e6fb6b88d6ad770528deb3dbf0232336d71603fea768d",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v2.0.1/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "dac59adb50fb90a62fd168f8d11f504d13a4b64df184691b6776adc038d95c5b",
   "nro_size": 14915251,
   "min_updater_schema": 1,
   "changelog": [
-    "Randomizer mode (Beta): choose NORMAL or RANDOMIZER when you name a new file",
-    "Widescreen in Dual mode at 2X",
-    "Music and effects volume, voice mutes, cheats, autosave interval, stick dead zone",
-    "Fixed the white blob on lit torches, Link over door frames on stairs, widescreen during transitions"
+    "Fixed the pause menu looking shifted with a purple bar on the R tab in widescreen",
+    "New optional Quality of Life toggles (off by default): fairy charms 5 min, fairies heal 12 hearts",
+    "Shell drops x5, Stockwell's shop sells 300 shells, instant figurine capsule"
   ]
 }
