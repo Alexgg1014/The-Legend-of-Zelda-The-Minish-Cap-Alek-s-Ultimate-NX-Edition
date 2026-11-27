@@ -1,14 +1,15 @@
 {
   "schema": 1,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "channel": "stable",
-  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v2.0.1/tmc_aleks_ultimate_nx.nro",
-  "nro_sha256": "dac59adb50fb90a62fd168f8d11f504d13a4b64df184691b6776adc038d95c5b",
+  "nro_url": "https://github.com/Alexgg1014/The-Legend-of-Zelda-The-Minish-Cap-Alek-s-Ultimate-NX-Edition/releases/download/v2.0.2/tmc_aleks_ultimate_nx.nro",
+  "nro_sha256": "e11b6c0f04bae8cd0e7747cf6d0b63b17663bbda52bb0b56e9354c0990a4d6cf",
   "nro_size": 14915251,
   "min_updater_schema": 1,
   "changelog": [
-    "Fixed the pause menu looking shifted with a purple bar on the R tab in widescreen",
-    "New optional Quality of Life toggles (off by default): fairy charms 5 min, fairies heal 12 hearts",
-    "Shell drops x5, Stockwell's shop sells 300 shells, instant figurine capsule"
+    "Scissors Beetle attacks again; Moldorm's body follows its head",
+    "Daze stars go away; Hyrule Town people, clothes and doors no longer vanish",
+    "You can enter the waterfalls opened by Kinstone fusions",
+    "Widescreen: forest light and dark-room lighting reach the right edge"
   ]
 }

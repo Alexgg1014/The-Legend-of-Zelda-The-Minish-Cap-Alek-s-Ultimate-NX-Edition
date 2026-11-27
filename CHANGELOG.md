@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.0.2 - enemy, town and widescreen fixes
+
+### Fixed
+
+- **Scissors Beetle idle** (issue #23): `MandiblesProjectileEntity` lacked the
+  +4 `Enemy` pad, so beetle and mandibles cross-wrote `unk_80`/`unk_82`. Same
+  class padded in DirtBall (Pesto), BallAndChain, GyorgTail and
+  OctorokBossProjectile.
+- **Moldorm stretched across rooms**: the segment ring at `&unk_7c.split` sits
+  inside the 8-byte pointer union; init now fills all 8 bytes.
+- **Daze stars stay**: `GenericConfused` read `Entity::child` instead of
+  `Enemy::child`.
+- **Town NPCs/clothes/doors vanish** (#23, #24): `gArea.filler6` aliases
+  `gUnk_020342F8` on GBA; `sub_0806F364`/`InitRoom` now clear the real bitmap.
+- **Kinstone waterfalls not enterable** (#24): `kinstone.c` type 9 wrote
+  MiscManager x/y through Entity offsets.
+- **Widescreen windows end at x=240** (#24): ViruaPPU treats `WINxH` right
+  edge 0xF0 as the frame's right edge (`viruappu-ws-window-edge.patch`).
+
 ## v2.0.1 - pause menu in widescreen, Definitive Edition options
 
 ### Fixed
